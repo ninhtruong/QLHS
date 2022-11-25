@@ -29,12 +29,6 @@ namespace QLHS
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TyLe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblHocKy = new System.Windows.Forms.Label();
             this.lblMonHoc = new System.Windows.Forms.Label();
             this.lblTenLop = new System.Windows.Forms.Label();
@@ -55,55 +49,9 @@ namespace QLHS
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataLopHoc = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLopHoc)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaLop,
-            this.TenLop,
-            this.SiSo,
-            this.SoLuongDat,
-            this.TyLe});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 299);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1134, 449);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // MaLop
-            // 
-            this.MaLop.HeaderText = "Mã Lớp";
-            this.MaLop.MinimumWidth = 6;
-            this.MaLop.Name = "MaLop";
-            // 
-            // TenLop
-            // 
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.MinimumWidth = 6;
-            this.TenLop.Name = "TenLop";
-            // 
-            // SiSo
-            // 
-            this.SiSo.HeaderText = "Sĩ Số";
-            this.SiSo.MinimumWidth = 6;
-            this.SiSo.Name = "SiSo";
-            // 
-            // SoLuongDat
-            // 
-            this.SoLuongDat.HeaderText = "Số Lượng Đạt";
-            this.SoLuongDat.MinimumWidth = 6;
-            this.SoLuongDat.Name = "SoLuongDat";
-            // 
-            // TyLe
-            // 
-            this.TyLe.HeaderText = "Tỷ Lệ";
-            this.TyLe.MinimumWidth = 6;
-            this.TyLe.Name = "TyLe";
             // 
             // lblHocKy
             // 
@@ -275,6 +223,17 @@ namespace QLHS
             this.label1.TabIndex = 32;
             this.label1.Text = "Danh Sách Lớp Học";
             // 
+            // dataLopHoc
+            // 
+            this.dataLopHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataLopHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataLopHoc.Location = new System.Drawing.Point(12, 299);
+            this.dataLopHoc.Name = "dataLopHoc";
+            this.dataLopHoc.RowHeadersWidth = 51;
+            this.dataLopHoc.RowTemplate.Height = 24;
+            this.dataLopHoc.Size = new System.Drawing.Size(1134, 449);
+            this.dataLopHoc.TabIndex = 0;
+            // 
             // Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -300,23 +259,16 @@ namespace QLHS
             this.Controls.Add(this.lblMaLop);
             this.Controls.Add(this.lblMonHoc);
             this.Controls.Add(this.lblHocKy);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataLopHoc);
             this.Name = "Class";
             this.Text = "Class";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLopHoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SiSo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TyLe;
         private System.Windows.Forms.Label lblHocKy;
         private System.Windows.Forms.Label lblMonHoc;
         private System.Windows.Forms.Label lblTenLop;
@@ -337,5 +289,6 @@ namespace QLHS
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataLopHoc;
     }
 }
