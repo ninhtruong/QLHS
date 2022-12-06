@@ -44,9 +44,6 @@ namespace QLHS
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtMaHS = new System.Windows.Forms.TextBox();
-            this.txtLop = new System.Windows.Forms.TextBox();
-            this.txtHocKy = new System.Windows.Forms.TextBox();
             this.txtToan = new System.Windows.Forms.TextBox();
             this.txtNguVan = new System.Windows.Forms.TextBox();
             this.txtVatLy = new System.Windows.Forms.TextBox();
@@ -59,34 +56,24 @@ namespace QLHS
             this.txtCongNghe = new System.Windows.Forms.TextBox();
             this.txtTinHoc = new System.Windows.Forms.TextBox();
             this.txtXepLoai = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Toan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NguVan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VatLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SinhHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgoaiNgu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LichSu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GDCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CongNghe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XepLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataPoint = new System.Windows.Forms.DataGridView();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cbxHocKy = new System.Windows.Forms.ComboBox();
+            this.cbxLopHoc = new System.Windows.Forms.ComboBox();
+            this.cbxHocSinh = new System.Windows.Forms.ComboBox();
+            this.txtTheDuc = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPoint)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(328, 146);
+            this.label1.Location = new System.Drawing.Point(267, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 17);
             this.label1.TabIndex = 0;
@@ -113,7 +100,7 @@ namespace QLHS
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(483, 146);
+            this.label4.Location = new System.Drawing.Point(422, 146);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 2;
@@ -131,7 +118,7 @@ namespace QLHS
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(851, 146);
+            this.label6.Location = new System.Drawing.Point(758, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 17);
             this.label6.TabIndex = 4;
@@ -140,7 +127,7 @@ namespace QLHS
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1041, 146);
+            this.label7.Location = new System.Drawing.Point(904, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 17);
             this.label7.TabIndex = 7;
@@ -167,7 +154,7 @@ namespace QLHS
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(648, 146);
+            this.label10.Location = new System.Drawing.Point(591, 146);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 17);
             this.label10.TabIndex = 8;
@@ -176,7 +163,7 @@ namespace QLHS
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1217, 146);
+            this.label11.Location = new System.Drawing.Point(1063, 151);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 17);
             this.label11.TabIndex = 10;
@@ -218,33 +205,9 @@ namespace QLHS
             this.label15.TabIndex = 14;
             this.label15.Text = "Xếp loại";
             // 
-            // txtMaHS
-            // 
-            this.txtMaHS.Location = new System.Drawing.Point(106, 143);
-            this.txtMaHS.Name = "txtMaHS";
-            this.txtMaHS.ReadOnly = true;
-            this.txtMaHS.Size = new System.Drawing.Size(161, 22);
-            this.txtMaHS.TabIndex = 15;
-            // 
-            // txtLop
-            // 
-            this.txtLop.Location = new System.Drawing.Point(50, 218);
-            this.txtLop.Name = "txtLop";
-            this.txtLop.ReadOnly = true;
-            this.txtLop.Size = new System.Drawing.Size(87, 22);
-            this.txtLop.TabIndex = 16;
-            // 
-            // txtHocKy
-            // 
-            this.txtHocKy.Location = new System.Drawing.Point(202, 218);
-            this.txtHocKy.Name = "txtHocKy";
-            this.txtHocKy.ReadOnly = true;
-            this.txtHocKy.Size = new System.Drawing.Size(87, 22);
-            this.txtHocKy.TabIndex = 17;
-            // 
             // txtToan
             // 
-            this.txtToan.Location = new System.Drawing.Point(375, 146);
+            this.txtToan.Location = new System.Drawing.Point(314, 148);
             this.txtToan.Name = "txtToan";
             this.txtToan.Size = new System.Drawing.Size(76, 22);
             this.txtToan.TabIndex = 18;
@@ -258,7 +221,7 @@ namespace QLHS
             // 
             // txtVatLy
             // 
-            this.txtVatLy.Location = new System.Drawing.Point(551, 146);
+            this.txtVatLy.Location = new System.Drawing.Point(490, 146);
             this.txtVatLy.Name = "txtVatLy";
             this.txtVatLy.Size = new System.Drawing.Size(76, 22);
             this.txtVatLy.TabIndex = 20;
@@ -272,7 +235,7 @@ namespace QLHS
             // 
             // txtSinhHoc
             // 
-            this.txtSinhHoc.Location = new System.Drawing.Point(735, 146);
+            this.txtSinhHoc.Location = new System.Drawing.Point(662, 148);
             this.txtSinhHoc.Name = "txtSinhHoc";
             this.txtSinhHoc.Size = new System.Drawing.Size(76, 22);
             this.txtSinhHoc.TabIndex = 22;
@@ -286,7 +249,7 @@ namespace QLHS
             // 
             // txtDiaLy
             // 
-            this.txtDiaLy.Location = new System.Drawing.Point(925, 146);
+            this.txtDiaLy.Location = new System.Drawing.Point(812, 148);
             this.txtDiaLy.Name = "txtDiaLy";
             this.txtDiaLy.Size = new System.Drawing.Size(76, 22);
             this.txtDiaLy.TabIndex = 24;
@@ -300,7 +263,7 @@ namespace QLHS
             // 
             // txtGDCD
             // 
-            this.txtGDCD.Location = new System.Drawing.Point(1112, 143);
+            this.txtGDCD.Location = new System.Drawing.Point(958, 148);
             this.txtGDCD.Name = "txtGDCD";
             this.txtGDCD.Size = new System.Drawing.Size(76, 22);
             this.txtGDCD.TabIndex = 26;
@@ -314,7 +277,7 @@ namespace QLHS
             // 
             // txtTinHoc
             // 
-            this.txtTinHoc.Location = new System.Drawing.Point(1280, 143);
+            this.txtTinHoc.Location = new System.Drawing.Point(1126, 148);
             this.txtTinHoc.Name = "txtTinHoc";
             this.txtTinHoc.Size = new System.Drawing.Size(76, 22);
             this.txtTinHoc.TabIndex = 28;
@@ -327,136 +290,15 @@ namespace QLHS
             this.txtXepLoai.Size = new System.Drawing.Size(76, 22);
             this.txtXepLoai.TabIndex = 29;
             // 
-            // dataGridView1
+            // dataPoint
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaHS,
-            this.Lop,
-            this.HocKy,
-            this.Toan,
-            this.NguVan,
-            this.VatLy,
-            this.HoaHoc,
-            this.SinhHoc,
-            this.NgoaiNgu,
-            this.DiaLy,
-            this.LichSu,
-            this.GDCD,
-            this.CongNghe,
-            this.TinHoc,
-            this.XepLoai});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 345);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1361, 428);
-            this.dataGridView1.TabIndex = 30;
-            // 
-            // MaHS
-            // 
-            this.MaHS.HeaderText = "Mã HS";
-            this.MaHS.MinimumWidth = 6;
-            this.MaHS.Name = "MaHS";
-            this.MaHS.Width = 125;
-            // 
-            // Lop
-            // 
-            this.Lop.HeaderText = "Lớp";
-            this.Lop.MinimumWidth = 6;
-            this.Lop.Name = "Lop";
-            this.Lop.Width = 125;
-            // 
-            // HocKy
-            // 
-            this.HocKy.HeaderText = "Học Kỳ";
-            this.HocKy.MinimumWidth = 6;
-            this.HocKy.Name = "HocKy";
-            this.HocKy.Width = 125;
-            // 
-            // Toan
-            // 
-            this.Toan.HeaderText = "Toán";
-            this.Toan.MinimumWidth = 6;
-            this.Toan.Name = "Toan";
-            this.Toan.Width = 125;
-            // 
-            // NguVan
-            // 
-            this.NguVan.HeaderText = "Ngữ Văn";
-            this.NguVan.MinimumWidth = 6;
-            this.NguVan.Name = "NguVan";
-            this.NguVan.Width = 125;
-            // 
-            // VatLy
-            // 
-            this.VatLy.HeaderText = "Vật Lý";
-            this.VatLy.MinimumWidth = 6;
-            this.VatLy.Name = "VatLy";
-            this.VatLy.Width = 125;
-            // 
-            // HoaHoc
-            // 
-            this.HoaHoc.HeaderText = "Hóa Học";
-            this.HoaHoc.MinimumWidth = 6;
-            this.HoaHoc.Name = "HoaHoc";
-            this.HoaHoc.Width = 125;
-            // 
-            // SinhHoc
-            // 
-            this.SinhHoc.HeaderText = "Sinh Học";
-            this.SinhHoc.MinimumWidth = 6;
-            this.SinhHoc.Name = "SinhHoc";
-            this.SinhHoc.Width = 125;
-            // 
-            // NgoaiNgu
-            // 
-            this.NgoaiNgu.HeaderText = "Ngoại Ngữ";
-            this.NgoaiNgu.MinimumWidth = 6;
-            this.NgoaiNgu.Name = "NgoaiNgu";
-            this.NgoaiNgu.Width = 125;
-            // 
-            // DiaLy
-            // 
-            this.DiaLy.HeaderText = "Địa Lý";
-            this.DiaLy.MinimumWidth = 6;
-            this.DiaLy.Name = "DiaLy";
-            this.DiaLy.Width = 125;
-            // 
-            // LichSu
-            // 
-            this.LichSu.HeaderText = "Lịch Sử";
-            this.LichSu.MinimumWidth = 6;
-            this.LichSu.Name = "LichSu";
-            this.LichSu.Width = 125;
-            // 
-            // GDCD
-            // 
-            this.GDCD.HeaderText = "GDCD";
-            this.GDCD.MinimumWidth = 6;
-            this.GDCD.Name = "GDCD";
-            this.GDCD.Width = 125;
-            // 
-            // CongNghe
-            // 
-            this.CongNghe.HeaderText = "Công Nghệ";
-            this.CongNghe.MinimumWidth = 6;
-            this.CongNghe.Name = "CongNghe";
-            this.CongNghe.Width = 125;
-            // 
-            // TinHoc
-            // 
-            this.TinHoc.HeaderText = "Tin Học";
-            this.TinHoc.MinimumWidth = 6;
-            this.TinHoc.Name = "TinHoc";
-            this.TinHoc.Width = 125;
-            // 
-            // XepLoai
-            // 
-            this.XepLoai.HeaderText = "Xếp Loại";
-            this.XepLoai.MinimumWidth = 6;
-            this.XepLoai.Name = "XepLoai";
-            this.XepLoai.Width = 125;
+            this.dataPoint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataPoint.Location = new System.Drawing.Point(12, 345);
+            this.dataPoint.Name = "dataPoint";
+            this.dataPoint.RowHeadersWidth = 51;
+            this.dataPoint.RowTemplate.Height = 24;
+            this.dataPoint.Size = new System.Drawing.Size(1361, 428);
+            this.dataPoint.TabIndex = 30;
             // 
             // btnLuu
             // 
@@ -502,17 +344,65 @@ namespace QLHS
             this.label16.TabIndex = 35;
             this.label16.Text = "Danh Sách Điểm Số Của Học Sinh";
             // 
+            // cbxHocKy
+            // 
+            this.cbxHocKy.FormattingEnabled = true;
+            this.cbxHocKy.Location = new System.Drawing.Point(202, 219);
+            this.cbxHocKy.Name = "cbxHocKy";
+            this.cbxHocKy.Size = new System.Drawing.Size(108, 24);
+            this.cbxHocKy.TabIndex = 36;
+            this.cbxHocKy.SelectionChangeCommitted += new System.EventHandler(this.cbxHocKy_SelectionChangeCommitted);
+            // 
+            // cbxLopHoc
+            // 
+            this.cbxLopHoc.FormattingEnabled = true;
+            this.cbxLopHoc.Location = new System.Drawing.Point(41, 218);
+            this.cbxLopHoc.Name = "cbxLopHoc";
+            this.cbxLopHoc.Size = new System.Drawing.Size(96, 24);
+            this.cbxLopHoc.TabIndex = 37;
+            this.cbxLopHoc.SelectedIndexChanged += new System.EventHandler(this.cbxLopHoc_SelectedIndexChanged);
+            // 
+            // cbxHocSinh
+            // 
+            this.cbxHocSinh.FormattingEnabled = true;
+            this.cbxHocSinh.Location = new System.Drawing.Point(106, 146);
+            this.cbxHocSinh.Name = "cbxHocSinh";
+            this.cbxHocSinh.Size = new System.Drawing.Size(155, 24);
+            this.cbxHocSinh.TabIndex = 38;
+            this.cbxHocSinh.SelectionChangeCommitted += new System.EventHandler(this.cbxHocSinh_SelectionChangeCommitted);
+            // 
+            // txtTheDuc
+            // 
+            this.txtTheDuc.Location = new System.Drawing.Point(1280, 148);
+            this.txtTheDuc.Name = "txtTheDuc";
+            this.txtTheDuc.Size = new System.Drawing.Size(76, 22);
+            this.txtTheDuc.TabIndex = 40;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1217, 151);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(62, 17);
+            this.label17.TabIndex = 39;
+            this.label17.Text = "Thể Dục";
+            // 
             // CreatePoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1385, 785);
+            this.Controls.Add(this.txtTheDuc);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.cbxHocSinh);
+            this.Controls.Add(this.cbxLopHoc);
+            this.Controls.Add(this.cbxHocKy);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataPoint);
             this.Controls.Add(this.txtXepLoai);
             this.Controls.Add(this.txtTinHoc);
             this.Controls.Add(this.txtCongNghe);
@@ -525,9 +415,6 @@ namespace QLHS
             this.Controls.Add(this.txtVatLy);
             this.Controls.Add(this.txtNguVan);
             this.Controls.Add(this.txtToan);
-            this.Controls.Add(this.txtHocKy);
-            this.Controls.Add(this.txtLop);
-            this.Controls.Add(this.txtMaHS);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -545,7 +432,7 @@ namespace QLHS
             this.Controls.Add(this.label1);
             this.Name = "CreatePoint";
             this.Text = "CreatePoint";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPoint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,9 +455,6 @@ namespace QLHS
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtMaHS;
-        private System.Windows.Forms.TextBox txtLop;
-        private System.Windows.Forms.TextBox txtHocKy;
         private System.Windows.Forms.TextBox txtToan;
         private System.Windows.Forms.TextBox txtNguVan;
         private System.Windows.Forms.TextBox txtVatLy;
@@ -583,26 +467,16 @@ namespace QLHS
         private System.Windows.Forms.TextBox txtCongNghe;
         private System.Windows.Forms.TextBox txtTinHoc;
         private System.Windows.Forms.TextBox txtXepLoai;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HocKy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Toan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NguVan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VatLy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoaHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SinhHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgoaiNgu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaLy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LichSu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GDCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CongNghe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TinHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn XepLoai;
+        private System.Windows.Forms.DataGridView dataPoint;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cbxHocKy;
+        private System.Windows.Forms.ComboBox cbxLopHoc;
+        private System.Windows.Forms.ComboBox cbxHocSinh;
+        private System.Windows.Forms.TextBox txtTheDuc;
+        private System.Windows.Forms.Label label17;
     }
 }
