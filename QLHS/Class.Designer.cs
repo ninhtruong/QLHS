@@ -30,26 +30,20 @@ namespace QLHS
         private void InitializeComponent()
         {
             this.lblHocKy = new System.Windows.Forms.Label();
-            this.lblMonHoc = new System.Windows.Forms.Label();
-            this.lblTenLop = new System.Windows.Forms.Label();
-            this.lblMaLop = new System.Windows.Forms.Label();
             this.lblSoLuongDat = new System.Windows.Forms.Label();
             this.lblSiSo = new System.Windows.Forms.Label();
-            this.lblTyLe = new System.Windows.Forms.Label();
-            this.txtMaLop = new System.Windows.Forms.TextBox();
             this.cbxHocKy = new System.Windows.Forms.ComboBox();
-            this.cbxMonHoc = new System.Windows.Forms.ComboBox();
             this.txtTenLop = new System.Windows.Forms.TextBox();
             this.txtSiSo = new System.Windows.Forms.TextBox();
-            this.txtTyLe = new System.Windows.Forms.TextBox();
             this.txtSoLuongDat = new System.Windows.Forms.TextBox();
             this.btnXoaLop = new System.Windows.Forms.Button();
-            this.btnSuaLop = new System.Windows.Forms.Button();
+            this.btnChiTiet = new System.Windows.Forms.Button();
             this.btnThemLop = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataLopHoc = new System.Windows.Forms.DataGridView();
+            this.lblTenLop = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataLopHoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,37 +56,10 @@ namespace QLHS
             this.lblHocKy.TabIndex = 1;
             this.lblHocKy.Text = "Học Kỳ";
             // 
-            // lblMonHoc
-            // 
-            this.lblMonHoc.AutoSize = true;
-            this.lblMonHoc.Location = new System.Drawing.Point(29, 189);
-            this.lblMonHoc.Name = "lblMonHoc";
-            this.lblMonHoc.Size = new System.Drawing.Size(64, 17);
-            this.lblMonHoc.TabIndex = 2;
-            this.lblMonHoc.Text = "Môn Học";
-            // 
-            // lblTenLop
-            // 
-            this.lblTenLop.AutoSize = true;
-            this.lblTenLop.Location = new System.Drawing.Point(279, 189);
-            this.lblTenLop.Name = "lblTenLop";
-            this.lblTenLop.Size = new System.Drawing.Size(61, 17);
-            this.lblTenLop.TabIndex = 4;
-            this.lblTenLop.Text = "Tên Lớp";
-            // 
-            // lblMaLop
-            // 
-            this.lblMaLop.AutoSize = true;
-            this.lblMaLop.Location = new System.Drawing.Point(279, 127);
-            this.lblMaLop.Name = "lblMaLop";
-            this.lblMaLop.Size = new System.Drawing.Size(55, 17);
-            this.lblMaLop.TabIndex = 3;
-            this.lblMaLop.Text = "Mã Lớp";
-            // 
             // lblSoLuongDat
             // 
             this.lblSoLuongDat.AutoSize = true;
-            this.lblSoLuongDat.Location = new System.Drawing.Point(781, 124);
+            this.lblSoLuongDat.Location = new System.Drawing.Point(895, 128);
             this.lblSoLuongDat.Name = "lblSoLuongDat";
             this.lblSoLuongDat.Size = new System.Drawing.Size(95, 17);
             this.lblSoLuongDat.TabIndex = 6;
@@ -101,28 +68,11 @@ namespace QLHS
             // lblSiSo
             // 
             this.lblSiSo.AutoSize = true;
-            this.lblSiSo.Location = new System.Drawing.Point(532, 127);
+            this.lblSiSo.Location = new System.Drawing.Point(646, 131);
             this.lblSiSo.Name = "lblSiSo";
             this.lblSiSo.Size = new System.Drawing.Size(39, 17);
             this.lblSiSo.TabIndex = 5;
             this.lblSiSo.Text = "Sĩ số";
-            // 
-            // lblTyLe
-            // 
-            this.lblTyLe.AutoSize = true;
-            this.lblTyLe.Location = new System.Drawing.Point(532, 192);
-            this.lblTyLe.Name = "lblTyLe";
-            this.lblTyLe.Size = new System.Drawing.Size(39, 17);
-            this.lblTyLe.TabIndex = 7;
-            this.lblTyLe.Text = "Tỷ lệ";
-            // 
-            // txtMaLop
-            // 
-            this.txtMaLop.Location = new System.Drawing.Point(340, 124);
-            this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.ReadOnly = true;
-            this.txtMaLop.Size = new System.Drawing.Size(163, 22);
-            this.txtMaLop.TabIndex = 8;
             // 
             // cbxHocKy
             // 
@@ -132,38 +82,23 @@ namespace QLHS
             this.cbxHocKy.Size = new System.Drawing.Size(173, 24);
             this.cbxHocKy.TabIndex = 9;
             // 
-            // cbxMonHoc
-            // 
-            this.cbxMonHoc.FormattingEnabled = true;
-            this.cbxMonHoc.Location = new System.Drawing.Point(100, 189);
-            this.cbxMonHoc.Name = "cbxMonHoc";
-            this.cbxMonHoc.Size = new System.Drawing.Size(173, 24);
-            this.cbxMonHoc.TabIndex = 10;
-            // 
             // txtTenLop
             // 
-            this.txtTenLop.Location = new System.Drawing.Point(340, 184);
+            this.txtTenLop.Location = new System.Drawing.Point(384, 126);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(163, 22);
+            this.txtTenLop.Size = new System.Drawing.Size(173, 22);
             this.txtTenLop.TabIndex = 11;
             // 
             // txtSiSo
             // 
-            this.txtSiSo.Location = new System.Drawing.Point(598, 124);
+            this.txtSiSo.Location = new System.Drawing.Point(712, 128);
             this.txtSiSo.Name = "txtSiSo";
             this.txtSiSo.Size = new System.Drawing.Size(124, 22);
             this.txtSiSo.TabIndex = 12;
             // 
-            // txtTyLe
-            // 
-            this.txtTyLe.Location = new System.Drawing.Point(598, 184);
-            this.txtTyLe.Name = "txtTyLe";
-            this.txtTyLe.Size = new System.Drawing.Size(124, 22);
-            this.txtTyLe.TabIndex = 13;
-            // 
             // txtSoLuongDat
             // 
-            this.txtSoLuongDat.Location = new System.Drawing.Point(882, 124);
+            this.txtSoLuongDat.Location = new System.Drawing.Point(996, 128);
             this.txtSoLuongDat.Name = "txtSoLuongDat";
             this.txtSoLuongDat.Size = new System.Drawing.Size(124, 22);
             this.txtSoLuongDat.TabIndex = 14;
@@ -177,14 +112,15 @@ namespace QLHS
             this.btnXoaLop.Text = "Xóa Lớp";
             this.btnXoaLop.UseVisualStyleBackColor = true;
             // 
-            // btnSuaLop
+            // btnChiTiet
             // 
-            this.btnSuaLop.Location = new System.Drawing.Point(853, 240);
-            this.btnSuaLop.Name = "btnSuaLop";
-            this.btnSuaLop.Size = new System.Drawing.Size(124, 35);
-            this.btnSuaLop.TabIndex = 28;
-            this.btnSuaLop.Text = "Sửa Lớp";
-            this.btnSuaLop.UseVisualStyleBackColor = true;
+            this.btnChiTiet.Location = new System.Drawing.Point(853, 240);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(124, 35);
+            this.btnChiTiet.TabIndex = 28;
+            this.btnChiTiet.Text = "Xem Chi Tiết";
+            this.btnChiTiet.UseVisualStyleBackColor = true;
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // btnThemLop
             // 
@@ -233,6 +169,16 @@ namespace QLHS
             this.dataLopHoc.RowTemplate.Height = 24;
             this.dataLopHoc.Size = new System.Drawing.Size(1134, 449);
             this.dataLopHoc.TabIndex = 0;
+            this.dataLopHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLopHoc_CellClick);
+            // 
+            // lblTenLop
+            // 
+            this.lblTenLop.AutoSize = true;
+            this.lblTenLop.Location = new System.Drawing.Point(323, 131);
+            this.lblTenLop.Name = "lblTenLop";
+            this.lblTenLop.Size = new System.Drawing.Size(61, 17);
+            this.lblTenLop.TabIndex = 4;
+            this.lblTenLop.Text = "Tên Lớp";
             // 
             // Class
             // 
@@ -243,21 +189,15 @@ namespace QLHS
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnXoaLop);
-            this.Controls.Add(this.btnSuaLop);
+            this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.btnThemLop);
             this.Controls.Add(this.txtSoLuongDat);
-            this.Controls.Add(this.txtTyLe);
             this.Controls.Add(this.txtSiSo);
             this.Controls.Add(this.txtTenLop);
-            this.Controls.Add(this.cbxMonHoc);
             this.Controls.Add(this.cbxHocKy);
-            this.Controls.Add(this.txtMaLop);
-            this.Controls.Add(this.lblTyLe);
             this.Controls.Add(this.lblSoLuongDat);
             this.Controls.Add(this.lblSiSo);
             this.Controls.Add(this.lblTenLop);
-            this.Controls.Add(this.lblMaLop);
-            this.Controls.Add(this.lblMonHoc);
             this.Controls.Add(this.lblHocKy);
             this.Controls.Add(this.dataLopHoc);
             this.Name = "Class";
@@ -270,25 +210,19 @@ namespace QLHS
 
         #endregion
         private System.Windows.Forms.Label lblHocKy;
-        private System.Windows.Forms.Label lblMonHoc;
-        private System.Windows.Forms.Label lblTenLop;
-        private System.Windows.Forms.Label lblMaLop;
         private System.Windows.Forms.Label lblSoLuongDat;
         private System.Windows.Forms.Label lblSiSo;
-        private System.Windows.Forms.Label lblTyLe;
-        private System.Windows.Forms.TextBox txtMaLop;
         private System.Windows.Forms.ComboBox cbxHocKy;
-        private System.Windows.Forms.ComboBox cbxMonHoc;
         private System.Windows.Forms.TextBox txtTenLop;
         private System.Windows.Forms.TextBox txtSiSo;
-        private System.Windows.Forms.TextBox txtTyLe;
         private System.Windows.Forms.TextBox txtSoLuongDat;
         private System.Windows.Forms.Button btnXoaLop;
-        private System.Windows.Forms.Button btnSuaLop;
+        private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnThemLop;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataLopHoc;
+        private System.Windows.Forms.Label lblTenLop;
     }
 }

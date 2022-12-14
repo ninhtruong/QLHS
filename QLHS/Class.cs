@@ -1,4 +1,5 @@
-﻿using QLHS.Data;
+﻿using QLHS.Common;
+using QLHS.Data;
 using QLHS.Model;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,8 @@ namespace QLHS
         public Class()
         {
             InitializeComponent();
-            LoadData();
+            ShowHocKy();
+            ListLopHoc();
         }
 
         private void btnThemLop_Click(object sender, EventArgs e)
@@ -26,30 +28,53 @@ namespace QLHS
             createlop.Show();
         }
 
-        private void LoadData()
+        private void ShowHocKy()
+        {
+            cbxHocKy.DataSource = ShowData.ShowHocKy();
+        }
+
+        private void ListLopHoc()
         {
             var sql = "SELECT * FROM LOPHOC";
             var conn = Connection.GetConnection();
             var read = Connection.GetDataReader(conn, sql, "", "");
-            var ListClass = new List<LopHoc>();
+            var ListLopHoc = new List<LopHocToiDa>();
             while (read.Read())
             {
-                var malop = read["MaLopHoc"];
-                var makhoi = read["MaKhoi"];
-                var tenlop = read["TenLH"];
-                var sisotoida = read["SiSoToiDa"];
-
-                ListClass.Add(new LopHoc
-                {
-                    MaLop = Convert.ToInt32(malop),
-                    MaKhoi = Convert.ToInt32(makhoi),
-                    TenLH = tenlop.ToString(),
-                    SiSoToiDa = Convert.ToInt32(sisotoida),
-                    Tyle = 0
-                });
+                var tenlophoc = read["TenLH"];
+                var siso = read["SiSoToiDa"];
+                ListLopHoc.Add(new LopHocToiDa { TenLH = tenlophoc.ToString(), SiSoToiDa = Convert.ToInt32(siso), SiSoHienCo = ShowData.CountLopHoc(tenlophoc.ToString()) });
             }
+            dataLopHoc.DataSource = ListLopHoc;
+        }
 
-            dataLopHoc.DataSource = ListClass;
+        public class LopHocToiDa
+        {
+            public string TenLH { get; set; }
+            public int SiSoToiDa { get; set; }
+
+            public int SiSoHienCo { get; set; }
+        }
+
+        private void dataLopHoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                //gets a collection that contains all the rows
+                DataGridViewRow row = this.dataLopHoc.Rows[e.RowIndex];
+                //populate the textbox from specific value of the coordinates of column and row.
+                txtTenLop.Text = row.Cells[0].Value.ToString();
+                //var y = row.Cells[1].Value.ToString();
+                txtSiSo.Text = row.Cells[1].Value.ToString();
+                txtSoLuongDat.Text = row.Cells[2].Value.ToString();
+            }
+        }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            ClassDetail form = new ClassDetail(txtTenLop.Text);
+            form.Show();
+            this.Hide();
         }
     }
 }

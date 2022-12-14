@@ -8,6 +8,8 @@ namespace QLHS.Model
 {
     public class DiemMonHoc
     {
+        public int MaHocSinh { get; set; }
+        public string TenHocSinh { get; set; }
         public double ToanHoc { get; set; }
         public double NguVan { get; set; }
         public double VatLy { get; set; }

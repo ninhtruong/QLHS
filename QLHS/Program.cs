@@ -16,7 +16,7 @@ namespace QLHS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreatePoint());
+            Application.Run(new Class());
         }
     }
 }

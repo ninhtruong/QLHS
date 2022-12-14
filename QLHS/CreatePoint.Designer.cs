@@ -57,16 +57,16 @@ namespace QLHS
             this.txtTinHoc = new System.Windows.Forms.TextBox();
             this.txtXepLoai = new System.Windows.Forms.TextBox();
             this.dataPoint = new System.Windows.Forms.DataGridView();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.cbxHocKy = new System.Windows.Forms.ComboBox();
             this.cbxLopHoc = new System.Windows.Forms.ComboBox();
-            this.cbxHocSinh = new System.Windows.Forms.ComboBox();
             this.txtTheDuc = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.txtHS = new System.Windows.Forms.TextBox();
+            this.btnChiTietHocSinh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataPoint)).BeginInit();
             this.SuspendLayout();
             // 
@@ -299,15 +299,7 @@ namespace QLHS
             this.dataPoint.RowTemplate.Height = 24;
             this.dataPoint.Size = new System.Drawing.Size(1361, 428);
             this.dataPoint.TabIndex = 30;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(1113, 282);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(116, 36);
-            this.btnLuu.TabIndex = 31;
-            this.btnLuu.Text = "Lưu Thông Tin";
-            this.btnLuu.UseVisualStyleBackColor = true;
+            this.dataPoint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPoint_CellClick);
             // 
             // btnQuayLai
             // 
@@ -351,7 +343,6 @@ namespace QLHS
             this.cbxHocKy.Name = "cbxHocKy";
             this.cbxHocKy.Size = new System.Drawing.Size(108, 24);
             this.cbxHocKy.TabIndex = 36;
-            this.cbxHocKy.SelectionChangeCommitted += new System.EventHandler(this.cbxHocKy_SelectionChangeCommitted);
             // 
             // cbxLopHoc
             // 
@@ -360,16 +351,7 @@ namespace QLHS
             this.cbxLopHoc.Name = "cbxLopHoc";
             this.cbxLopHoc.Size = new System.Drawing.Size(96, 24);
             this.cbxLopHoc.TabIndex = 37;
-            this.cbxLopHoc.SelectedIndexChanged += new System.EventHandler(this.cbxLopHoc_SelectedIndexChanged);
-            // 
-            // cbxHocSinh
-            // 
-            this.cbxHocSinh.FormattingEnabled = true;
-            this.cbxHocSinh.Location = new System.Drawing.Point(106, 146);
-            this.cbxHocSinh.Name = "cbxHocSinh";
-            this.cbxHocSinh.Size = new System.Drawing.Size(155, 24);
-            this.cbxHocSinh.TabIndex = 38;
-            this.cbxHocSinh.SelectionChangeCommitted += new System.EventHandler(this.cbxHocSinh_SelectionChangeCommitted);
+            this.cbxLopHoc.SelectedValueChanged += new System.EventHandler(this.cbxLopHoc_SelectedValueChanged);
             // 
             // txtTheDuc
             // 
@@ -387,21 +369,38 @@ namespace QLHS
             this.label17.TabIndex = 39;
             this.label17.Text = "Thể Dục";
             // 
+            // txtHS
+            // 
+            this.txtHS.Location = new System.Drawing.Point(106, 145);
+            this.txtHS.Name = "txtHS";
+            this.txtHS.Size = new System.Drawing.Size(155, 22);
+            this.txtHS.TabIndex = 41;
+            // 
+            // btnChiTietHocSinh
+            // 
+            this.btnChiTietHocSinh.Location = new System.Drawing.Point(1086, 282);
+            this.btnChiTietHocSinh.Name = "btnChiTietHocSinh";
+            this.btnChiTietHocSinh.Size = new System.Drawing.Size(148, 36);
+            this.btnChiTietHocSinh.TabIndex = 42;
+            this.btnChiTietHocSinh.Text = "Thông tin chi tiết";
+            this.btnChiTietHocSinh.UseVisualStyleBackColor = true;
+            this.btnChiTietHocSinh.Click += new System.EventHandler(this.btnChiTietHocSinh_Click);
+            // 
             // CreatePoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1385, 785);
+            this.Controls.Add(this.btnChiTietHocSinh);
+            this.Controls.Add(this.txtHS);
             this.Controls.Add(this.txtTheDuc);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.cbxHocSinh);
             this.Controls.Add(this.cbxLopHoc);
             this.Controls.Add(this.cbxHocKy);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnQuayLai);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.dataPoint);
             this.Controls.Add(this.txtXepLoai);
             this.Controls.Add(this.txtTinHoc);
@@ -468,15 +467,15 @@ namespace QLHS
         private System.Windows.Forms.TextBox txtTinHoc;
         private System.Windows.Forms.TextBox txtXepLoai;
         private System.Windows.Forms.DataGridView dataPoint;
-        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cbxHocKy;
         private System.Windows.Forms.ComboBox cbxLopHoc;
-        private System.Windows.Forms.ComboBox cbxHocSinh;
         private System.Windows.Forms.TextBox txtTheDuc;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtHS;
+        private System.Windows.Forms.Button btnChiTietHocSinh;
     }
 }
