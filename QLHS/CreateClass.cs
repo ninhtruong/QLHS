@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLHS.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace QLHS
         public CreateClass()
         {
             InitializeComponent();
+            txtMaLop.Text = ShowData.ShowIDLOP().ToString();
         }
 
         private void btnQuayLai_Click(object sender, EventArgs e)

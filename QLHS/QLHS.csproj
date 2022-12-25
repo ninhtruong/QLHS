@@ -58,6 +58,7 @@
     <Compile Include="ClassDetail.Designer.cs">
       <DependentUpon>ClassDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\InsertData.cs" />
     <Compile Include="Common\ShowData.cs" />
     <Compile Include="CreateClass.cs">
       <SubType>Form</SubType>

@@ -30,8 +30,6 @@ namespace QLHS
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataHocSinh = new System.Windows.Forms.DataGridView();
-            this.cbxLop = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -42,13 +40,15 @@ namespace QLHS
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMaHS = new System.Windows.Forms.TextBox();
-            this.cbxGioiTinh = new System.Windows.Forms.ComboBox();
-            this.dateNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTenHS = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.dataHocSinh = new System.Windows.Forms.DataGridView();
+            this.txtLop = new System.Windows.Forms.TextBox();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataHocSinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,29 +61,6 @@ namespace QLHS
             this.label1.Size = new System.Drawing.Size(256, 31);
             this.label1.TabIndex = 47;
             this.label1.Text = "Danh Sách Lớp Học";
-            // 
-            // dataHocSinh
-            // 
-            this.dataHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataHocSinh.Location = new System.Drawing.Point(26, 306);
-            this.dataHocSinh.Name = "dataHocSinh";
-            this.dataHocSinh.RowHeadersWidth = 51;
-            this.dataHocSinh.RowTemplate.Height = 24;
-            this.dataHocSinh.Size = new System.Drawing.Size(1300, 449);
-            this.dataHocSinh.TabIndex = 33;
-            // 
-            // cbxLop
-            // 
-            this.cbxLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxLop.FormattingEnabled = true;
-            this.cbxLop.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbxLop.Location = new System.Drawing.Point(1136, 71);
-            this.cbxLop.Name = "cbxLop";
-            this.cbxLop.Size = new System.Drawing.Size(171, 37);
-            this.cbxLop.TabIndex = 63;
             // 
             // label8
             // 
@@ -184,31 +161,12 @@ namespace QLHS
             this.txtMaHS.Size = new System.Drawing.Size(189, 37);
             this.txtMaHS.TabIndex = 53;
             // 
-            // cbxGioiTinh
-            // 
-            this.cbxGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGioiTinh.FormattingEnabled = true;
-            this.cbxGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbxGioiTinh.Location = new System.Drawing.Point(861, 71);
-            this.cbxGioiTinh.Name = "cbxGioiTinh";
-            this.cbxGioiTinh.Size = new System.Drawing.Size(200, 37);
-            this.cbxGioiTinh.TabIndex = 52;
-            // 
-            // dateNgaySinh
-            // 
-            this.dateNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNgaySinh.Location = new System.Drawing.Point(861, 163);
-            this.dateNgaySinh.Name = "dateNgaySinh";
-            this.dateNgaySinh.Size = new System.Drawing.Size(200, 34);
-            this.dateNgaySinh.TabIndex = 51;
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(513, 160);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(203, 37);
             this.txtEmail.TabIndex = 50;
             // 
@@ -217,6 +175,7 @@ namespace QLHS
             this.txtTenHS.Location = new System.Drawing.Point(513, 71);
             this.txtTenHS.Multiline = true;
             this.txtTenHS.Name = "txtTenHS";
+            this.txtTenHS.ReadOnly = true;
             this.txtTenHS.Size = new System.Drawing.Size(203, 37);
             this.txtTenHS.TabIndex = 49;
             // 
@@ -225,6 +184,7 @@ namespace QLHS
             this.txtDiaChi.Location = new System.Drawing.Point(151, 163);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(189, 37);
             this.txtDiaChi.TabIndex = 48;
             // 
@@ -245,14 +205,55 @@ namespace QLHS
             this.txtTimKiem.Size = new System.Drawing.Size(386, 35);
             this.txtTimKiem.TabIndex = 64;
             // 
+            // dataHocSinh
+            // 
+            this.dataHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataHocSinh.Location = new System.Drawing.Point(26, 306);
+            this.dataHocSinh.Name = "dataHocSinh";
+            this.dataHocSinh.RowHeadersWidth = 51;
+            this.dataHocSinh.RowTemplate.Height = 24;
+            this.dataHocSinh.Size = new System.Drawing.Size(1300, 449);
+            this.dataHocSinh.TabIndex = 33;
+            this.dataHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataHocSinh_CellClick);
+            // 
+            // txtLop
+            // 
+            this.txtLop.Location = new System.Drawing.Point(1136, 71);
+            this.txtLop.Multiline = true;
+            this.txtLop.Name = "txtLop";
+            this.txtLop.ReadOnly = true;
+            this.txtLop.Size = new System.Drawing.Size(203, 37);
+            this.txtLop.TabIndex = 66;
+            // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Location = new System.Drawing.Point(858, 64);
+            this.txtGioiTinh.Multiline = true;
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.ReadOnly = true;
+            this.txtGioiTinh.Size = new System.Drawing.Size(203, 37);
+            this.txtGioiTinh.TabIndex = 67;
+            // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.Location = new System.Drawing.Point(858, 163);
+            this.txtNgaySinh.Multiline = true;
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.ReadOnly = true;
+            this.txtNgaySinh.Size = new System.Drawing.Size(203, 37);
+            this.txtNgaySinh.TabIndex = 68;
+            // 
             // ClassDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1358, 776);
+            this.Controls.Add(this.txtNgaySinh);
+            this.Controls.Add(this.txtGioiTinh);
+            this.Controls.Add(this.txtLop);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.cbxLop);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnThem);
@@ -263,8 +264,6 @@ namespace QLHS
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtMaHS);
-            this.Controls.Add(this.cbxGioiTinh);
-            this.Controls.Add(this.dateNgaySinh);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtTenHS);
             this.Controls.Add(this.txtDiaChi);
@@ -281,8 +280,6 @@ namespace QLHS
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataHocSinh;
-        private System.Windows.Forms.ComboBox cbxLop;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Button btnThem;
@@ -293,12 +290,14 @@ namespace QLHS
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMaHS;
-        private System.Windows.Forms.ComboBox cbxGioiTinh;
-        private System.Windows.Forms.DateTimePicker dateNgaySinh;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtTenHS;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.DataGridView dataHocSinh;
+        private System.Windows.Forms.TextBox txtLop;
+        private System.Windows.Forms.TextBox txtGioiTinh;
+        private System.Windows.Forms.TextBox txtNgaySinh;
     }
 }

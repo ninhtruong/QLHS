@@ -45,7 +45,7 @@ namespace QLHS
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbxLop = new System.Windows.Forms.ComboBox();
+            this.txtLop = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtMaHS
@@ -169,6 +169,7 @@ namespace QLHS
             this.btnThem.TabIndex = 19;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnQuayLai
             // 
@@ -194,30 +195,27 @@ namespace QLHS
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1093, 182);
+            this.label8.Location = new System.Drawing.Point(1073, 182);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 20);
             this.label8.TabIndex = 22;
             this.label8.Text = "Lớp";
             // 
-            // cbxLop
+            // txtLop
             // 
-            this.cbxLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxLop.FormattingEnabled = true;
-            this.cbxLop.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbxLop.Location = new System.Drawing.Point(1136, 172);
-            this.cbxLop.Name = "cbxLop";
-            this.cbxLop.Size = new System.Drawing.Size(171, 37);
-            this.cbxLop.TabIndex = 23;
+            this.txtLop.Location = new System.Drawing.Point(1116, 172);
+            this.txtLop.Multiline = true;
+            this.txtLop.Name = "txtLop";
+            this.txtLop.ReadOnly = true;
+            this.txtLop.Size = new System.Drawing.Size(203, 37);
+            this.txtLop.TabIndex = 23;
             // 
             // CreateStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1331, 423);
-            this.Controls.Add(this.cbxLop);
+            this.Controls.Add(this.txtLop);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnQuayLai);
@@ -259,6 +257,6 @@ namespace QLHS
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbxLop;
+        private System.Windows.Forms.TextBox txtLop;
     }
 }

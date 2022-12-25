@@ -10,9 +10,51 @@ namespace QLHS.Common
 {
     public static class ShowData
     {
+
+        public static int ShowIDHocSinh()
+        {
+            var sql = "SELECT TOP 1 * FROM HOCSINH ORDER BY MaHocSinh DESC";
+            var conn = Connection.GetConnection();
+            var read = Connection.GetDataReader(conn, sql, "", "");
+            var HocSinh = new List<int>();
+            while (read.Read())
+            {
+                var mahocsinh = read["MaHocSinh"];
+                HocSinh.Add(Convert.ToInt32(mahocsinh) + 1);
+            }
+            return HocSinh.FirstOrDefault();
+        }
+
+        public static int ShowIDLOP()
+        {
+            var sql = "SELECT TOP 1 * FROM LOPHOC ORDER BY MaLopHoc DESC";
+            var conn = Connection.GetConnection();
+            var read = Connection.GetDataReader(conn, sql, "", "");
+            var HocSinh = new List<int>();
+            while (read.Read())
+            {
+                var mahocsinh = read["MaLopHoc"];
+                HocSinh.Add(Convert.ToInt32(mahocsinh) + 1);
+            }
+            return HocSinh.FirstOrDefault();
+        }
+
+        public static int ShowIDLopHoc(string LopHoc)
+        {
+            var sql = "SELECT * FROM LOPHOC WHERE TenLH = '"+ LopHoc + "'";
+            var conn = Connection.GetConnection();
+            var read = Connection.GetDataReader(conn, sql, "", "");
+            var LH = new List<int>();
+            while (read.Read())
+            {
+                var malophoc = read["MaLopHoc"];
+                LH.Add(Convert.ToInt32(malophoc));
+            }
+            return LH.FirstOrDefault();
+        }
         public static List<int> ShowHocKy()
         {
-            var sql = "	  SELECT * FROM HOCKY";
+            var sql = "SELECT * FROM HOCKY";
             var conn = Connection.GetConnection();
             var read = Connection.GetDataReader(conn, sql, "", "");
             var ListHocKy = new List<int>();
@@ -77,14 +119,14 @@ namespace QLHS.Common
             var ListHocSinh = new List<HocSinh>();
             while (read.Read())
             {
-
+                var mahocsinh = read["MaHocSinh"];
                 var tenhocsinh = read["HoTen"];
                 var ngaysinh = read["NgaySinh"];
                 var gioitinh = read["GioiTinh"];
                 var diachi = read["DiaChi"];
                 var email = read["Email"];
                 var boolgioitinh = Convert.ToBoolean(gioitinh) == true ? "Nam" : "Nữ";
-                ListHocSinh.Add(new HocSinh { HoTen = tenhocsinh.ToString(), NgaySinh = Convert.ToDateTime(ngaysinh), GioiTinh = boolgioitinh, DiaChi = diachi.ToString(), Email = email.ToString() });
+                ListHocSinh.Add(new HocSinh { MaHocSinh = Convert.ToInt32(mahocsinh), HoTen = tenhocsinh.ToString(), NgaySinh = Convert.ToDateTime(ngaysinh), GioiTinh = boolgioitinh, DiaChi = diachi.ToString(), Email = email.ToString() });
             }
             return ListHocSinh;
         }
