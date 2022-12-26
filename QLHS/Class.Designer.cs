@@ -77,7 +77,7 @@ namespace QLHS
             // cbxHocKy
             // 
             this.cbxHocKy.FormattingEnabled = true;
-            this.cbxHocKy.Location = new System.Drawing.Point(100, 124);
+            this.cbxHocKy.Location = new System.Drawing.Point(88, 125);
             this.cbxHocKy.Name = "cbxHocKy";
             this.cbxHocKy.Size = new System.Drawing.Size(173, 24);
             this.cbxHocKy.TabIndex = 9;

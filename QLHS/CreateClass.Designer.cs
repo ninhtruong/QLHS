@@ -31,15 +31,15 @@ namespace QLHS
         {
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaLop = new System.Windows.Forms.TextBox();
-            this.txtTyLe = new System.Windows.Forms.TextBox();
             this.txtTenLop = new System.Windows.Forms.TextBox();
             this.txtSiso = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbKhoi = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnQuayLai
@@ -60,16 +60,7 @@ namespace QLHS
             this.btnThem.TabIndex = 33;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(403, 260);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 20);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Tỷ lệ";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label3
             // 
@@ -77,15 +68,15 @@ namespace QLHS
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(38, 260);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
+            this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Sĩ số";
+            this.label3.Text = "Sĩ số tối đa";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(390, 166);
+            this.label2.Location = new System.Drawing.Point(388, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 28;
@@ -110,17 +101,9 @@ namespace QLHS
             this.txtMaLop.Size = new System.Drawing.Size(189, 37);
             this.txtMaLop.TabIndex = 26;
             // 
-            // txtTyLe
-            // 
-            this.txtTyLe.Location = new System.Drawing.Point(529, 245);
-            this.txtTyLe.Multiline = true;
-            this.txtTyLe.Name = "txtTyLe";
-            this.txtTyLe.Size = new System.Drawing.Size(203, 37);
-            this.txtTyLe.TabIndex = 23;
-            // 
             // txtTenLop
             // 
-            this.txtTenLop.Location = new System.Drawing.Point(529, 156);
+            this.txtTenLop.Location = new System.Drawing.Point(527, 250);
             this.txtTenLop.Multiline = true;
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(203, 37);
@@ -144,20 +127,43 @@ namespace QLHS
             this.label5.TabIndex = 35;
             this.label5.Text = "Thêm Lớp Học";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(388, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 20);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Chọn khối";
+            // 
+            // cbKhoi
+            // 
+            this.cbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbKhoi.FormattingEnabled = true;
+            this.cbKhoi.Items.AddRange(new object[] {
+            "10",
+            "11",
+            "12"});
+            this.cbKhoi.Location = new System.Drawing.Point(527, 159);
+            this.cbKhoi.Name = "cbKhoi";
+            this.cbKhoi.Size = new System.Drawing.Size(203, 34);
+            this.cbKhoi.TabIndex = 38;
+            // 
             // CreateClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 413);
+            this.Controls.Add(this.cbKhoi);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMaLop);
-            this.Controls.Add(this.txtTyLe);
             this.Controls.Add(this.txtTenLop);
             this.Controls.Add(this.txtSiso);
             this.Name = "CreateClass";
@@ -171,14 +177,14 @@ namespace QLHS
 
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaLop;
-        private System.Windows.Forms.TextBox txtTyLe;
         private System.Windows.Forms.TextBox txtTenLop;
         private System.Windows.Forms.TextBox txtSiso;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbKhoi;
     }
 }

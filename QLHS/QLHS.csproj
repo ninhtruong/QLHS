@@ -95,6 +95,7 @@
     <Compile Include="Model\ChiTietBaiThi.cs" />
     <Compile Include="Model\DiemMonHoc.cs" />
     <Compile Include="Model\EnumMonHoc.cs" />
+    <Compile Include="Model\GiaoVien.cs" />
     <Compile Include="Model\HocKy.cs" />
     <Compile Include="Model\HocSinh.cs" />
     <Compile Include="Model\LopHoc.cs" />

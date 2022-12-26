@@ -25,6 +25,20 @@ namespace QLHS.Common
             return HocSinh.FirstOrDefault();
         }
 
+        public static int ShowIDKhoi(string tenkhoi)
+        {
+            var sql = "SELECT * FROM KHOI WHERE TenKHoi = '"+tenkhoi+"'";
+            var conn = Connection.GetConnection();
+            var read = Connection.GetDataReader(conn, sql, "", "");
+            var Khoi = new List<int>();
+            while (read.Read())
+            {
+                var makhoi = read["MaKhoi"];
+                Khoi.Add(Convert.ToInt32(makhoi));
+            }
+            return Khoi.FirstOrDefault();
+        }
+
         public static int ShowIDLOP()
         {
             var sql = "SELECT TOP 1 * FROM LOPHOC ORDER BY MaLopHoc DESC";
