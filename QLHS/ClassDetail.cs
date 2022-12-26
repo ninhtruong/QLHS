@@ -57,5 +57,10 @@ namespace QLHS
                 
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            dataHocSinh.DataSource = ShowData.ShowHocSinh(TenLop).Where(c => c.HoTen.Contains(txtTimKiem.Text)).ToList();
+        }
     }
 }

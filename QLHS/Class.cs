@@ -15,6 +15,8 @@ namespace QLHS
 {
     public partial class Class : Form
     {
+
+        public static List<LopHocToiDa> ListLop;
         public Class()
         {
             InitializeComponent();
@@ -45,6 +47,7 @@ namespace QLHS
                 var siso = read["SiSoToiDa"];
                 ListLopHoc.Add(new LopHocToiDa { TenLH = tenlophoc.ToString(), SiSoToiDa = Convert.ToInt32(siso), SiSoHienCo = ShowData.CountLopHoc(tenlophoc.ToString()) });
             }
+            ListLop = ListLopHoc;
             dataLopHoc.DataSource = ListLopHoc;
         }
 
@@ -75,6 +78,11 @@ namespace QLHS
             ClassDetail form = new ClassDetail(txtTenLop.Text);
             form.Show();
             this.Hide();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            dataLopHoc.DataSource = ListLop.Where(c=>c.TenLH.Contains(txtTimKiem.Text)).ToList();
         }
     }
 }
