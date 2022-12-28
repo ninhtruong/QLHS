@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLHS
+namespace QLHSC3
 {
     static class Program
     {
@@ -16,7 +15,7 @@ namespace QLHS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Class());
+            Application.Run(new GUI.frmDangNhap());
         }
     }
 }
