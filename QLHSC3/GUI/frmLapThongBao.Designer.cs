@@ -53,7 +53,7 @@
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Location = new System.Drawing.Point(45, 38);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(100, 28);
             this.labelX1.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.labelX2.BackgroundStyle.Class = "";
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Location = new System.Drawing.Point(45, 74);
-            this.labelX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(4);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(139, 28);
             this.labelX2.TabIndex = 1;
@@ -84,7 +84,7 @@
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.ForeColor = System.Drawing.Color.Blue;
             this.labelX3.Location = new System.Drawing.Point(221, 1);
-            this.labelX3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX3.Margin = new System.Windows.Forms.Padding(4);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(269, 28);
             this.labelX3.TabIndex = 25;
@@ -99,7 +99,7 @@
             this.tbxTenThongBao.Border.Class = "TextBoxBorder";
             this.tbxTenThongBao.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbxTenThongBao.Location = new System.Drawing.Point(281, 37);
-            this.tbxTenThongBao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxTenThongBao.Margin = new System.Windows.Forms.Padding(4);
             this.tbxTenThongBao.Name = "tbxTenThongBao";
             this.tbxTenThongBao.Size = new System.Drawing.Size(459, 26);
             this.tbxTenThongBao.TabIndex = 1;
@@ -113,7 +113,7 @@
             this.tbxNoiDungThongBao.Border.Class = "TextBoxBorder";
             this.tbxNoiDungThongBao.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbxNoiDungThongBao.Location = new System.Drawing.Point(45, 110);
-            this.tbxNoiDungThongBao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxNoiDungThongBao.Margin = new System.Windows.Forms.Padding(4);
             this.tbxNoiDungThongBao.Multiline = true;
             this.tbxNoiDungThongBao.Name = "tbxNoiDungThongBao";
             this.tbxNoiDungThongBao.Size = new System.Drawing.Size(695, 94);
@@ -129,7 +129,7 @@
             this.dtNgayThongBao.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtNgayThongBao.ButtonDropDown.Visible = true;
             this.dtNgayThongBao.Location = new System.Drawing.Point(447, 69);
-            this.dtNgayThongBao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtNgayThongBao.Margin = new System.Windows.Forms.Padding(4);
             // 
             // 
             // 
@@ -169,7 +169,7 @@
             this.dtNgayThongBao.Size = new System.Drawing.Size(293, 22);
             this.dtNgayThongBao.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtNgayThongBao.TabIndex = 2;
-            this.dtNgayThongBao.Value = new System.DateTime(2022, 12, 27, 1, 29, 0, 0);
+            this.dtNgayThongBao.Value = new System.DateTime(2022, 12, 29, 1, 29, 0, 0);
             // 
             // labelX4
             // 
@@ -179,7 +179,7 @@
             this.labelX4.BackgroundStyle.Class = "";
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Location = new System.Drawing.Point(281, 69);
-            this.labelX4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX4.Margin = new System.Windows.Forms.Padding(4);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(139, 28);
             this.labelX4.TabIndex = 27;
@@ -190,7 +190,7 @@
             this.btnLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnLuu.Location = new System.Drawing.Point(640, 210);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 28);
             this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -213,7 +213,7 @@
             this.lvThongBao.FullRowSelect = true;
             this.lvThongBao.GridLines = true;
             this.lvThongBao.Location = new System.Drawing.Point(16, 246);
-            this.lvThongBao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvThongBao.Margin = new System.Windows.Forms.Padding(4);
             this.lvThongBao.MultiSelect = false;
             this.lvThongBao.Name = "lvThongBao";
             this.lvThongBao.Size = new System.Drawing.Size(733, 137);
@@ -250,7 +250,7 @@
             this.labelX5.BackgroundStyle.Class = "";
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.Location = new System.Drawing.Point(45, 210);
-            this.labelX5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX5.Margin = new System.Windows.Forms.Padding(4);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(153, 28);
             this.labelX5.TabIndex = 31;
@@ -274,7 +274,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLapThongBao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lập thông báo";
