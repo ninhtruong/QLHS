@@ -11,6 +11,13 @@ namespace QLHSC3.DAO
 {
     class QuyDinhDAO : DaoSupport
     {
+
+        /// <summary>
+        /// Thêm quy định mới
+        /// </summary>
+        /// <param name="tenQD"></param>
+        /// <param name="noiDungQD"></param>
+        /// <returns></returns>
         public bool ThemQuyDinh(string tenQD, string noiDungQD)
         {
             string nameProc = "sp_ThemQuyDinhMoi";
@@ -28,6 +35,12 @@ namespace QLHSC3.DAO
 
         }
 
+
+        /// <summary>
+        /// Chỉnh sửa quy định
+        /// </summary>
+        /// <param name="quyDinh"></param>
+        /// <returns></returns>
         public bool ThayDoiQuyDinh(QuyDinh quyDinh)
         {
             string strSql = "sp_ThayDoiQuyDinh";
@@ -42,6 +55,12 @@ namespace QLHSC3.DAO
             }
             return true;
         }
+
+        /// <summary>
+        /// Tạo đối tượng từ dòng dữ liệu
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
         protected override object createObjectFromDatarow(DataRow row)
         {
             QuyDinh quyDinh = new QuyDinh();
@@ -59,6 +78,11 @@ namespace QLHSC3.DAO
         //    return quyDinh;
         //}
 
+
+        /// <summary>
+        /// Xuất danh sách quy định
+        /// </summary>
+        /// <returns></returns>
         public QuyDinh[] getAllQuyDinh()
         {
             string strSql = "SELECT * FROM QuyDinh";
@@ -74,6 +98,11 @@ namespace QLHSC3.DAO
             //return allMark;
         }
 
+        /// <summary>
+        /// Xóa quy định
+        /// </summary>
+        /// <param name="quyDinh"></param>
+        /// <returns></returns>
         public bool XoaQuyDinh(QuyDinh quyDinh)
         {
             string strSql = "DELETE FROM QuyDinh WHERE maQuyDinh='" + quyDinh.MaQuyDinh + "'";

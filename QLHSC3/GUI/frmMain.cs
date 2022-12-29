@@ -22,33 +22,21 @@ namespace QLHSC3.GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lbGioiThieu.Text = " Trường THPT Hai Bà Trưng (thành phố Huế) là một trong những\n"
-                + " ngôi trường lớn ở miền Trung và trên toàn quốc. Được thành lập\n"
-                + " ngày 15 tháng 7 năm 1917, lúc đó trường mang tên Đồng Khánh.\n"
-                + " Trải qua bao thăng trầm của lịch sử, trường được mang nhiều tên \n"
-                + " gọi khác nhau. Từ 1919 đến 1954, trường mang tên Cao đẳng\n"
-                + " tiểu học Đồng Khánh. Từ 1955 đến 1975, trường mang tên\n"
-                + " trường Nữ trung học Đồng Khánh gồm hai cấp: Đệ Nhất cấp  \n"
-                + " và Đệ Nhị cấp. Sau ngày thống nhất đất nước, trường được mang tên  \n"
-                + " Trường cấp III Trưng Trắc. Từ năm 1981 đến nay, trường được \n"
-                + " đổi tên thành Trường THPT Hai Bà Trưng.  \n";
+            lbGioiThieu.Text = "Trường được thành lập năm 1994 theo QĐ 768 ngày 9/8/1994 của UBND tỉnh. \n"
+                + "Lúc ấy Trường mang tên “Trường PTTH Bán công Phan Thiết” toạ lạc tại 391 Trần Hưng Đạo,\n"
+                + "Đây là cơ sở của Trường tiển học được xây dựng trước năm 1975 gồm 7 phòng học diện tích khoảng 32m2/phòng. \n"
+                + "Khi tiếp nhận cơ sở này, chỉ có phòng không vườn trống, không bàn ghế, không điện. \n"
+                + "Do mặt bằng thấp nên mùa mưa toàn bộ ngập tràn trong biển nước. Đội ngũ VBGVNV chỉ có 19 người. \n"
+                + "Học sinh cũng chỉ có 622 em/13 lớp, trong đó có 4 lớp 11 là học sinh hệ B từ trường Phan Bội Châu chuyển qua \n";
 
-            lbGioiThieu2.Text = "Trong suốt khoảng thời gian từ khi thành lập đến 1975, đây là ngôi trường nữ duy nhất ở miền \n"
-                + "Trung dạy đủ các môn: Văn, thể, mỹ và lao động kỹ thuật. Ngoài việc học văn hóa và nữ công \n"
-                + "gia chánh (may vá, thêu thùa, làm bánh, làm mứt...), nữ sinh Đồng Khánh còn được học cách \n"
-                + "nuôi con, cách quản lý gia đình, được rèn luyện phong cách người con gái có học thức,  \n"
-                + "có giáo dục, giản dị, trang nhã, lịch sự, khiêm tốn, tế nhị trong giao tiếp và một số  \n  "
-                + "môn học cơ bản về cứu thương.";
+            lbGioiThieu2.Text = "Thế rồi như một quy luật tất yếu của sự sinh tồn, toàn thể thầy và trò đã gồng mình lên để vượt qua gian khó, \n"
+                +"để tự khẳng định mình với tinh thần “khó khăn khắc phục, lấy bất biến ứng vạn biến”. \n"
+                +"Cứ như thế, từng ngày, từng tháng, kiên trì, nhẫn nại, bình tĩnh vượt qua và tồn tại, \n"
+                + "để đến ngày 26/2/1997 bắt đầu có ngôi trường mới với 12 phòng học, tại địa điểm bây giờ. \n";
 
-            lbGioiThieu3.Text = "- Những phần thưởng cao quý được đón nhận:\n"
-                + "+ Chủ tịch nước CHXHCN Việt Nam tặng Huân chương lao động hạng III.\n"
-                + "+ Bộ giáo dục tặng bằng khen đơn vị xuất sắc trong phong trào thi đua yêu nước \n"
-                + "ngành Giáo dục (Trong Hội nghị tổng kết thi đua 5 năm của ngành, từ 2001 đến 2005).\n"
-                + "+ UBND Tỉnh Thừa Thiên Huế tặng cờ 'Đơn vị thi đua xuất sắc'.\n"
-                + "+ Chi bộ Đảng nhà trường được Đảng bộ Thành phố Huế tặng giấy khen và công \n"
-                + "nhận 'Chi bộ trong sạch vững mạnh'.\n"
-                + "Liên tục các năm, từ 2000 - 2001 đến 2004 - 2005, trường đạt danh hiệu Trường \n"
-                + "tiên tiến xuất sắc cấp Tỉnh.";
+            lbGioiThieu3.Text = "Trường được Bộ Giáo dục tặng 01 Bằng khen, Bộ Văn hoá thể thao du lịch tặng 01 Bằng khen ;\n "
+                +"Chi bộ được Tỉnh Uỷ công nhận trong sạch vững mạnh tiêu biểu cấp Tỉnh 9 năm liền (1999-2007). \n"
+                +"Có thể nói đây là năm học đạt được nhiều kết quả tốt đẹp nhất";
 
             ribAo.Visible = false;
             switch (BienToanCuc.loai_nguoi_dung)

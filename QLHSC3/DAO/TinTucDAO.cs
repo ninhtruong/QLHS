@@ -18,6 +18,12 @@ namespace QLHSC3.DAO
         ////    TB.NoiDungThongBao = dt.Rows[i]["noiDungThongBao"].ToString();
         ////    return TB;
         ////}
+        
+        /// <summary>
+        /// Tạo đối tượng từ dòng dữ liệu
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
         protected override object createObjectFromDatarow(DataRow row)
         {
             ThongBao TB = new ThongBao();
@@ -27,6 +33,10 @@ namespace QLHSC3.DAO
             return TB;
         }
 
+        /// <summary>
+        /// Xuất tất cả thông báo
+        /// </summary>
+        /// <returns></returns>
         public ThongBao[] getAllNews()
         {
             string strSql = "SELECT * FROM ThongBao";

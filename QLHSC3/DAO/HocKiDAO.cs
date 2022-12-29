@@ -27,6 +27,11 @@ namespace QLHSC3.DAO
         //    return HK;
         //}
 
+
+        /// <summary>
+        /// Xuất danh sách học kỳ
+        /// </summary>
+        /// <returns></returns>
         public HocKi[] getAllHK()
         {
             string strSql = "SELECT * FROM HocKi";

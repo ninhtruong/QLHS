@@ -9,6 +9,11 @@ namespace QLHSC3.DAO
 {
     public abstract class DaoSupport
     {
+        /// <summary>
+        /// Tạo object từ dòng dữ liệu
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
         protected abstract object createObjectFromDatarow(DataRow row);
 
         //protected List<T> getListFromDataTable<T>(DataTable dt)
@@ -21,6 +26,12 @@ namespace QLHSC3.DAO
         //    }
         //    return list;
         //}
+        /// <summary>
+        /// Xuất danh sách dữ liệu ra bảng
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dt"></param>
+        /// <returns></returns>
         protected T[] getListFromDataTable<T>(DataTable dt)
         {
             List<T> list = new List<T>();

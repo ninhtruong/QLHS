@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
+            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar15 = new DevComponents.DotNetBar.RibbonBar();
             this.btnTraCuu_GVien = new DevComponents.DotNetBar.ButtonItem();
@@ -54,7 +54,6 @@
             this.btnThayDDSL_GVu = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar21 = new DevComponents.DotNetBar.RibbonBar();
             this.btnThayDHSHS_GV = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar11 = new DevComponents.DotNetBar.RibbonBar();
             this.btnXemTB_HSinh = new DevComponents.DotNetBar.ButtonItem();
@@ -87,9 +86,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -98,9 +94,6 @@
             this.groupTinTuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -125,9 +118,10 @@
             this.ribAo});
             this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
             this.ribbonControl1.Location = new System.Drawing.Point(5, 1);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.ribbonControl1.Size = new System.Drawing.Size(1300, 154);
+            this.ribbonControl1.Size = new System.Drawing.Size(1713, 190);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -148,16 +142,44 @@
             this.ribbonControl1.TabIndex = 0;
             this.ribbonControl1.Text = "ribbonControl1";
             // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel5.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel5.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonPanel5.Name = "ribbonPanel5";
+            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.ribbonPanel5.Size = new System.Drawing.Size(1713, 135);
+            // 
+            // 
+            // 
+            this.ribbonPanel5.Style.Class = "";
+            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseDown.Class = "";
+            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseOver.Class = "";
+            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel5.TabIndex = 5;
+            this.ribbonPanel5.Visible = true;
+            // 
             // ribbonPanel3
             // 
             this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonPanel3.Controls.Add(this.ribbonBar15);
             this.ribbonPanel3.Controls.Add(this.ribbonBar12);
             this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 65);
+            this.ribbonPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel3.Name = "ribbonPanel3";
-            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel3.Size = new System.Drawing.Size(1300, 99);
+            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.ribbonPanel3.Size = new System.Drawing.Size(1733, 122);
             // 
             // 
             // 
@@ -193,9 +215,10 @@
             this.ribbonBar15.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar15.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnTraCuu_GVien});
-            this.ribbonBar15.Location = new System.Drawing.Point(67, 0);
+            this.ribbonBar15.Location = new System.Drawing.Point(89, 0);
+            this.ribbonBar15.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar15.Name = "ribbonBar15";
-            this.ribbonBar15.Size = new System.Drawing.Size(65, 96);
+            this.ribbonBar15.Size = new System.Drawing.Size(87, 118);
             this.ribbonBar15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar15.TabIndex = 4;
             // 
@@ -236,9 +259,10 @@
             this.ribbonBar12.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnThayDBD_GVien});
-            this.ribbonBar12.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar12.Location = new System.Drawing.Point(4, 0);
+            this.ribbonBar12.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar12.Name = "ribbonBar12";
-            this.ribbonBar12.Size = new System.Drawing.Size(64, 96);
+            this.ribbonBar12.Size = new System.Drawing.Size(85, 118);
             this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar12.TabIndex = 1;
             // 
@@ -273,10 +297,11 @@
             this.ribbonPanel2.Controls.Add(this.ribbonBar23);
             this.ribbonPanel2.Controls.Add(this.ribbonBar21);
             this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 65);
+            this.ribbonPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1300, 99);
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1733, 122);
             // 
             // 
             // 
@@ -312,9 +337,10 @@
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btbTraCHS_GVu});
-            this.ribbonBar1.Location = new System.Drawing.Point(634, 0);
+            this.ribbonBar1.Location = new System.Drawing.Point(844, 0);
+            this.ribbonBar1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(120, 96);
+            this.ribbonBar1.Size = new System.Drawing.Size(160, 118);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 15;
             // 
@@ -356,9 +382,10 @@
             this.ribbonBar19.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnLapTKB_GVu,
             this.btnXemTKB_GVu});
-            this.ribbonBar19.Location = new System.Drawing.Point(516, 0);
+            this.ribbonBar19.Location = new System.Drawing.Point(687, 0);
+            this.ribbonBar19.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar19.Name = "ribbonBar19";
-            this.ribbonBar19.Size = new System.Drawing.Size(118, 96);
+            this.ribbonBar19.Size = new System.Drawing.Size(157, 118);
             this.ribbonBar19.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar19.TabIndex = 14;
             // 
@@ -410,9 +437,10 @@
             this.ribbonBar18.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnLapBCTKM_GVu,
             this.btnLapBCTKHK_GVu});
-            this.ribbonBar18.Location = new System.Drawing.Point(360, 0);
+            this.ribbonBar18.Location = new System.Drawing.Point(479, 0);
+            this.ribbonBar18.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar18.Name = "ribbonBar18";
-            this.ribbonBar18.Size = new System.Drawing.Size(156, 96);
+            this.ribbonBar18.Size = new System.Drawing.Size(208, 118);
             this.ribbonBar18.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar18.TabIndex = 13;
             // 
@@ -464,9 +492,10 @@
             this.ribbonBar26.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnLapTB_GVu,
             this.btnXemTB_GVu});
-            this.ribbonBar26.Location = new System.Drawing.Point(234, 0);
+            this.ribbonBar26.Location = new System.Drawing.Point(311, 0);
+            this.ribbonBar26.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar26.Name = "ribbonBar26";
-            this.ribbonBar26.Size = new System.Drawing.Size(126, 96);
+            this.ribbonBar26.Size = new System.Drawing.Size(168, 118);
             this.ribbonBar26.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar26.TabIndex = 12;
             // 
@@ -493,7 +522,6 @@
             // btnXemTB_GVu
             // 
             this.btnXemTB_GVu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnXemTB_GVu.Image = ((System.Drawing.Image)(resources.GetObject("btnXemTB_GVu.Image")));
             this.btnXemTB_GVu.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnXemTB_GVu.Name = "btnXemTB_GVu";
             this.btnXemTB_GVu.SubItemsExpandWidth = 14;
@@ -517,9 +545,10 @@
             this.ribbonBar25.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar25.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnThayDBD_GVu});
-            this.ribbonBar25.Location = new System.Drawing.Point(167, 0);
+            this.ribbonBar25.Location = new System.Drawing.Point(222, 0);
+            this.ribbonBar25.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar25.Name = "ribbonBar25";
-            this.ribbonBar25.Size = new System.Drawing.Size(67, 96);
+            this.ribbonBar25.Size = new System.Drawing.Size(89, 118);
             this.ribbonBar25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar25.TabIndex = 11;
             // 
@@ -560,9 +589,10 @@
             this.ribbonBar23.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar23.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnThayDDSL_GVu});
-            this.ribbonBar23.Location = new System.Drawing.Point(85, 0);
+            this.ribbonBar23.Location = new System.Drawing.Point(113, 0);
+            this.ribbonBar23.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar23.Name = "ribbonBar23";
-            this.ribbonBar23.Size = new System.Drawing.Size(82, 96);
+            this.ribbonBar23.Size = new System.Drawing.Size(109, 118);
             this.ribbonBar23.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar23.TabIndex = 9;
             // 
@@ -603,9 +633,10 @@
             this.ribbonBar21.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar21.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnThayDHSHS_GV});
-            this.ribbonBar21.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar21.Location = new System.Drawing.Point(4, 0);
+            this.ribbonBar21.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar21.Name = "ribbonBar21";
-            this.ribbonBar21.Size = new System.Drawing.Size(82, 96);
+            this.ribbonBar21.Size = new System.Drawing.Size(109, 118);
             this.ribbonBar21.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar21.TabIndex = 7;
             // 
@@ -629,31 +660,6 @@
             this.btnThayDHSHS_GV.Text = "Tiếp nhận hồ sơ học sinh";
             this.btnThayDHSHS_GV.Click += new System.EventHandler(this.btnThayDHSHS_GV_Click);
             // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel5.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel5.Name = "ribbonPanel5";
-            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel5.Size = new System.Drawing.Size(1300, 99);
-            // 
-            // 
-            // 
-            this.ribbonPanel5.Style.Class = "";
-            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel5.StyleMouseDown.Class = "";
-            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel5.StyleMouseOver.Class = "";
-            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel5.TabIndex = 5;
-            // 
             // ribbonPanel4
             // 
             this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -662,10 +668,11 @@
             this.ribbonPanel4.Controls.Add(this.ribbonBar8);
             this.ribbonPanel4.Controls.Add(this.ribbonBar6);
             this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 65);
+            this.ribbonPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(1300, 99);
+            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.ribbonPanel4.Size = new System.Drawing.Size(1733, 122);
             // 
             // 
             // 
@@ -701,9 +708,10 @@
             this.ribbonBar11.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnXemTB_HSinh});
-            this.ribbonBar11.Location = new System.Drawing.Point(228, 0);
+            this.ribbonBar11.Location = new System.Drawing.Point(303, 0);
+            this.ribbonBar11.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar11.Name = "ribbonBar11";
-            this.ribbonBar11.Size = new System.Drawing.Size(66, 96);
+            this.ribbonBar11.Size = new System.Drawing.Size(88, 118);
             this.ribbonBar11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar11.TabIndex = 5;
             // 
@@ -720,7 +728,6 @@
             // btnXemTB_HSinh
             // 
             this.btnXemTB_HSinh.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnXemTB_HSinh.Image = ((System.Drawing.Image)(resources.GetObject("btnXemTB_HSinh.Image")));
             this.btnXemTB_HSinh.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnXemTB_HSinh.Name = "btnXemTB_HSinh";
             this.btnXemTB_HSinh.SubItemsExpandWidth = 14;
@@ -744,9 +751,10 @@
             this.ribbonBar9.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar9.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnXemTKB_HSinh});
-            this.ribbonBar9.Location = new System.Drawing.Point(164, 0);
+            this.ribbonBar9.Location = new System.Drawing.Point(218, 0);
+            this.ribbonBar9.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar9.Name = "ribbonBar9";
-            this.ribbonBar9.Size = new System.Drawing.Size(64, 96);
+            this.ribbonBar9.Size = new System.Drawing.Size(85, 118);
             this.ribbonBar9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar9.TabIndex = 3;
             // 
@@ -787,9 +795,10 @@
             this.ribbonBar8.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar8.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnXemD_HSinh});
-            this.ribbonBar8.Location = new System.Drawing.Point(97, 0);
+            this.ribbonBar8.Location = new System.Drawing.Point(129, 0);
+            this.ribbonBar8.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(67, 96);
+            this.ribbonBar8.Size = new System.Drawing.Size(89, 118);
             this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar8.TabIndex = 2;
             // 
@@ -830,9 +839,10 @@
             this.ribbonBar6.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar6.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnXemTTCN_HSinh});
-            this.ribbonBar6.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar6.Location = new System.Drawing.Point(4, 0);
+            this.ribbonBar6.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Size = new System.Drawing.Size(94, 96);
+            this.ribbonBar6.Size = new System.Drawing.Size(125, 118);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar6.TabIndex = 0;
             // 
@@ -862,10 +872,11 @@
             this.ribbonPanel1.Controls.Add(this.ribbonBar2);
             this.ribbonPanel1.Controls.Add(this.ribbonBar32);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 65);
+            this.ribbonPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonPanel1.Name = "ribbonPanel1";
-            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1300, 99);
+            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1733, 122);
             // 
             // 
             // 
@@ -901,9 +912,10 @@
             this.ribbonBar2.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem2});
-            this.ribbonBar2.Location = new System.Drawing.Point(161, 0);
+            this.ribbonBar2.Location = new System.Drawing.Point(215, 0);
+            this.ribbonBar2.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(100, 96);
+            this.ribbonBar2.Size = new System.Drawing.Size(133, 118);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 14;
             // 
@@ -944,9 +956,10 @@
             this.ribbonBar32.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnXemBCTKM_BGHieu,
             this.btnXemBCTKHK_BGHieu});
-            this.ribbonBar32.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar32.Location = new System.Drawing.Point(4, 0);
+            this.ribbonBar32.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonBar32.Name = "ribbonBar32";
-            this.ribbonBar32.Size = new System.Drawing.Size(158, 96);
+            this.ribbonBar32.Size = new System.Drawing.Size(211, 118);
             this.ribbonBar32.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar32.TabIndex = 13;
             // 
@@ -1025,12 +1038,13 @@
             this.groupTinTuc.Controls.Add(this.lbGioiThieu3);
             this.groupTinTuc.Controls.Add(this.lbGioiThieu2);
             this.groupTinTuc.Controls.Add(this.lbGioiThieu);
-            this.groupTinTuc.Controls.Add(this.pictureBox1);
             this.groupTinTuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupTinTuc.ForeColor = System.Drawing.Color.White;
-            this.groupTinTuc.Location = new System.Drawing.Point(75, 201);
+            this.groupTinTuc.Location = new System.Drawing.Point(100, 247);
+            this.groupTinTuc.Margin = new System.Windows.Forms.Padding(4);
             this.groupTinTuc.Name = "groupTinTuc";
-            this.groupTinTuc.Size = new System.Drawing.Size(563, 492);
+            this.groupTinTuc.Padding = new System.Windows.Forms.Padding(4);
+            this.groupTinTuc.Size = new System.Drawing.Size(903, 620);
             this.groupTinTuc.TabIndex = 1;
             this.groupTinTuc.TabStop = false;
             this.groupTinTuc.Text = "Giới thiệu:";
@@ -1039,9 +1053,10 @@
             // 
             this.lbGioiThieu3.AutoSize = true;
             this.lbGioiThieu3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioiThieu3.Location = new System.Drawing.Point(13, 327);
+            this.lbGioiThieu3.Location = new System.Drawing.Point(17, 453);
+            this.lbGioiThieu3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGioiThieu3.Name = "lbGioiThieu3";
-            this.lbGioiThieu3.Size = new System.Drawing.Size(32, 16);
+            this.lbGioiThieu3.Size = new System.Drawing.Size(36, 20);
             this.lbGioiThieu3.TabIndex = 6;
             this.lbGioiThieu3.Text = "aaa";
             // 
@@ -1049,9 +1064,10 @@
             // 
             this.lbGioiThieu2.AutoSize = true;
             this.lbGioiThieu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioiThieu2.Location = new System.Drawing.Point(13, 215);
+            this.lbGioiThieu2.Location = new System.Drawing.Point(17, 239);
+            this.lbGioiThieu2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGioiThieu2.Name = "lbGioiThieu2";
-            this.lbGioiThieu2.Size = new System.Drawing.Size(32, 16);
+            this.lbGioiThieu2.Size = new System.Drawing.Size(36, 20);
             this.lbGioiThieu2.TabIndex = 5;
             this.lbGioiThieu2.Text = "aaa";
             // 
@@ -1059,18 +1075,20 @@
             // 
             this.lbGioiThieu.AutoSize = true;
             this.lbGioiThieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioiThieu.Location = new System.Drawing.Point(161, 26);
+            this.lbGioiThieu.Location = new System.Drawing.Point(17, 27);
+            this.lbGioiThieu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbGioiThieu.Name = "lbGioiThieu";
-            this.lbGioiThieu.Size = new System.Drawing.Size(32, 16);
+            this.lbGioiThieu.Size = new System.Drawing.Size(36, 20);
             this.lbGioiThieu.TabIndex = 4;
             this.lbGioiThieu.Text = "aaa";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QLHSC3.Properties.Resources.hbt_copy;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 25);
+            this.pictureBox1.Image = global::QLHSC3.Properties.Resources.logo_png__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(1011, 260);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 170);
+            this.pictureBox1.Size = new System.Drawing.Size(703, 519);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -1085,11 +1103,12 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.Color.White;
-            this.labelX1.Location = new System.Drawing.Point(444, 161);
+            this.labelX1.Location = new System.Drawing.Point(592, 198);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(584, 36);
+            this.labelX1.Size = new System.Drawing.Size(779, 44);
             this.labelX1.TabIndex = 2;
-            this.labelX1.Text = "TRƯỜNG TRUNG HỌC PHỔ THÔNG HAI BÀ TRƯNG";
+            this.labelX1.Text = "TRƯỜNG TRUNG HỌC PHỔ THÔNG PHAN CHU TRINH";
             // 
             // styleManager1
             // 
@@ -1099,9 +1118,11 @@
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(914, 664);
+            this.groupBox1.Location = new System.Drawing.Point(1011, 798);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 59);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(703, 73);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -1110,63 +1131,37 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(17, 32);
+            this.label2.Location = new System.Drawing.Point(23, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 16);
+            this.label2.Size = new System.Drawing.Size(169, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Bản quyền: ITUS - HCM";
+            this.label2.Text = "Bản quyền: 21HCB";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Location = new System.Drawing.Point(23, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 16);
+            this.label1.Size = new System.Drawing.Size(391, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thực hiện: Hồ Xuân Cường & Đặng Văn Quang";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::QLHSC3.Properties.Resources.logo_png__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(801, 212);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(119, 126);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::QLHSC3.Properties.Resources.logo;
-            this.pictureBox3.Location = new System.Drawing.Point(1103, 212);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(202, 387);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QLHSC3.Properties.Resources._6;
-            this.pictureBox2.Location = new System.Drawing.Point(648, 344);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(449, 289);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.label1.Text = "Thực hiện: Trương Nhật Ninh & Phạm Gia Long";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(1310, 782);
-            this.Controls.Add(this.pictureBox4);
+            this.ClientSize = new System.Drawing.Size(1723, 899);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.groupTinTuc);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ribbonControl1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Quản lý học sinh cấp 3";
@@ -1183,9 +1178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1227,7 +1219,6 @@
         private DevComponents.DotNetBar.ButtonItem btnThayDDSL_GVu;
         private DevComponents.DotNetBar.RibbonBar ribbonBar21;
         private DevComponents.DotNetBar.ButtonItem btnThayDHSHS_GV;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private DevComponents.DotNetBar.ButtonItem btnXemTB_GVu;
         private DevComponents.DotNetBar.RibbonBar ribbonBar19;
         private DevComponents.DotNetBar.ButtonItem btnLapTKB_GVu;
@@ -1243,15 +1234,13 @@
         private System.Windows.Forms.Label lbGioiThieu;
         private System.Windows.Forms.Label lbGioiThieu2;
         private System.Windows.Forms.Label lbGioiThieu3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private DevComponents.DotNetBar.StyleManager styleManager1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private DevComponents.DotNetBar.RibbonBar ribbonBar2;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

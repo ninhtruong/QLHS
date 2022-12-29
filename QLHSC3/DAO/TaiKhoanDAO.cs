@@ -19,6 +19,12 @@ namespace QLHSC3.DAO
         //    TK.MatKhau = dt.Rows[i]["matKhau"].ToString();
         //    return TK;
         //}
+
+        /// <summary>
+        /// Tạo đối tượng từ dòng dữ liệu
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
         protected override object createObjectFromDatarow(DataRow row)
         {
             TaiKhoanDangNhap TK = new TaiKhoanDangNhap();
@@ -28,6 +34,11 @@ namespace QLHSC3.DAO
             TK.MatKhau = row["matKhau"].ToString();
             return TK;
         }
+
+        /// <summary>
+        /// Xuất danh sách tài khoản
+        /// </summary>
+        /// <returns></returns>
         public TaiKhoanDangNhap[] getAllUser()
         {
             string strSql = "SELECT * FROM TaiKhoanDangNhap";

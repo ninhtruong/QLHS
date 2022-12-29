@@ -11,6 +11,12 @@ namespace QLHSC3.DAO
 {
     class HocSinhDAO : DaoSupport
     {
+        /// <summary>
+        /// Lấy dữ liệu từng học sinh
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <param name="i"></param>
+        /// <returns></returns>
         private HocSinh GetDataFromDataRow(DataTable dt, int i)
         {
             HocSinh HS = new HocSinh();
@@ -24,6 +30,12 @@ namespace QLHSC3.DAO
             HS.Diachi = dt.Rows[i]["diaChi"].ToString();
             return HS;
         }
+
+        /// <summary>
+        /// Tao đối tượng học sinh
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
         protected override object createObjectFromDatarow(DataRow row)
         {
             HocSinh HS = new HocSinh();
@@ -37,6 +49,11 @@ namespace QLHSC3.DAO
             HS.Diachi = row["diaChi"].ToString();
             return HS;
         }
+
+        /// <summary>
+        /// Xuất danh sách học sinh
+        /// </summary>
+        /// <returns></returns>
         public HocSinh[] getAllStudent()
         {
             string strSql = "SELECT * FROM HocSinh";
@@ -52,6 +69,13 @@ namespace QLHSC3.DAO
             //return allStudent;
         }
 
+        /// <summary>
+        /// Xuất danh sách học sinh của 1 lớp theo môn học
+        /// </summary>
+        /// <param name="maLop"></param>
+        /// <param name="maMonHoc"></param>
+        /// <param name="maHocKi"></param>
+        /// <returns></returns>
         public HocSinh[] getStudentIf(int maLop, int maMonHoc, int maHocKi)
         {
             string nameProc = "sp_LayDanhSachHocSinhCua1LopTheoMonHoc";
@@ -73,6 +97,11 @@ namespace QLHSC3.DAO
             //return allStudent;
         }
 
+        /// <summary>
+        /// Xuất thông tin từ tài khoản
+        /// </summary>
+        /// <param name="maTaiKhoan"></param>
+        /// <returns></returns>
         public HocSinh getStudentIf(int maTaiKhoan)
         {
             string nameProc = "sp_LayThongTinHocSinhTuTaiKhoan";
@@ -93,16 +122,32 @@ namespace QLHSC3.DAO
 
         }
 
-        // lay mã tài khoản từ bảng tài khoản( lấy theo tên đăng nhập)
+        /// <summary>
+        /// lấy mã tài khoản từ bảng tài khoản( lấy theo tên đăng nhập)
+        /// </summary>
+        /// <param name="bangMaTaiKhoan"></param>
+        /// <returns></returns>
         public int layMaTaiKhoan_TuBang_MaTaiKhoan(DataTable bangMaTaiKhoan)
         {
             return Convert.ToInt32(bangMaTaiKhoan.Rows[0]["maTaiKhoan"]);
         }
-        //lay ma tài khoản của học sinh từ mã học sinh
+
+
+        /// <summary>
+        /// lấy mã tài tài khoản học sinh
+        /// </summary>
+        /// <param name="bangMaTaiKhoan"></param>
+        /// <returns></returns>
         public int layMaTaiKhoanHS_TuBang_MaTaiKhoan(DataTable bangMaTaiKhoan)
         {
             return Convert.ToInt32(bangMaTaiKhoan.Rows[0]["maTaiKhoan"]);
         }
+
+        /// <summary>
+        /// Procedure lấy tên lớp từ mã học sinh
+        /// </summary>
+        /// <param name="hocsinh"></param>
+        /// <returns></returns>
         public string layTenLop_TuHocSinh_DAO(HocSinh hocsinh)
         {
             string nameProc_LayDSHocSinh_DaCoLop = "sp_layTenLop_TuHocSinh";
@@ -110,6 +155,12 @@ namespace QLHSC3.DAO
             DataTable bangDSHocSinh = DataProvider.executeStoreProcedureQuery(nameProc_LayDSHocSinh_DaCoLop, para1);
             return bangDSHocSinh.Rows[0]["tenLop"].ToString();
         }
+
+        /// <summary>
+        /// Lấy mã lớp từ mã học sinh
+        /// </summary>
+        /// <param name="hocsinh"></param>
+        /// <returns></returns>
         public int layMaLop_TuHocSinh_DAO(HocSinh hocsinh)
         {
             string nameProc_LayDSHocSinh_DaCoLop = "sp_layTenLop_TuHocSinh";
@@ -117,6 +168,12 @@ namespace QLHSC3.DAO
             DataTable bangDSHocSinh = DataProvider.executeStoreProcedureQuery(nameProc_LayDSHocSinh_DaCoLop, para1);
             return Convert.ToInt32(bangDSHocSinh.Rows[0]["maLop"]);
         }
+
+        /// <summary>
+        /// Procedure tiếp nahanj học sinh
+        /// </summary>
+        /// <param name="hocsinh"></param>
+        /// <returns></returns>
         public bool tiepNhanHocSinhDAO(HocSinh hocsinh)
         {
             string nameProc_TNHocSinh = "sp_tiepNhanHocSinh";
@@ -146,6 +203,12 @@ namespace QLHSC3.DAO
             }
             return false;
         }
+
+        /// <summary>
+        /// Lấy danh sách học sinh từ bảng dữ liệu
+        /// </summary>
+        /// <param name="bangDSHocSinh"></param>
+        /// <returns></returns>
         public HocSinh[] layDanhSachHocSinh_Tu_Bang(DataTable bangDSHocSinh)
         {
             HocSinh[] dsHocSinh = new HocSinh[bangDSHocSinh.Rows.Count];
@@ -166,6 +229,12 @@ namespace QLHSC3.DAO
             }
             return dsHocSinh;
         }
+
+        /// <summary>
+        /// Lấy danh sách học sinh đã có lớp từ bảng
+        /// </summary>
+        /// <param name="bangDSHocSinh"></param>
+        /// <returns></returns>
         public HocSinh[] layDanhSachHocSinh_DaCoLop_TuBang(DataTable bangDSHocSinh)
         {
             HocSinh[] dsHocSinh = new HocSinh[bangDSHocSinh.Rows.Count];
@@ -185,6 +254,11 @@ namespace QLHSC3.DAO
             }
             return dsHocSinh;
         }
+
+        /// <summary>
+        /// Procedure lấy danh sách học sinh
+        /// </summary>
+        /// <returns></returns>
         public HocSinh[] layDanhSachHocSinh_DAO()
         {
             HocSinh[] dsHocSinh;
@@ -193,7 +267,13 @@ namespace QLHSC3.DAO
             dsHocSinh = layDanhSachHocSinh_Tu_Bang(bangDSHocSinh);
             return dsHocSinh;
         }
-        // lấy danh sách học sinh trong một lớp( học sinh đã có trong lớp))
+
+
+        /// <summary>
+        ///  Lấy danh sách học sinh trong một lớp( học sinh đã có trong lớp))
+        /// </summary>
+        /// <param name="lop"></param>
+        /// <returns></returns>
         public HocSinh[] layDanhSachHocSinh_DaCoLop_DAO(Lop lop)
         {
             HocSinh[] dsHocSinh;
@@ -203,6 +283,11 @@ namespace QLHSC3.DAO
             dsHocSinh = layDanhSachHocSinh_DaCoLop_TuBang(bangDSHocSinh);
             return dsHocSinh;
         }
+
+        /// <summary>
+        /// Lấy danh sách học sinh chưa có lớp
+        /// </summary>
+        /// <returns></returns>
         public HocSinh[] layDanhSachHocSinh_ChuaCoLop_DAO()
         {
             HocSinh[] dsHocSinh;
@@ -211,6 +296,13 @@ namespace QLHSC3.DAO
             dsHocSinh = layDanhSachHocSinh_Tu_Bang(bangDSHocSinh_ChuaCoLop);
             return dsHocSinh;
         }
+
+
+        /// <summary>
+        /// Procedure xóa học sinh
+        /// </summary>
+        /// <param name="hocsinh"></param>
+        /// <returns></returns>
         public bool xoaHocSinh_DAO(HocSinh hocsinh)
         {
             string nameProc_XoaHocSinh = "sp_xoaHocSinh";
@@ -236,6 +328,12 @@ namespace QLHSC3.DAO
                 return false;
             }
         }
+
+        /// <summary>
+        /// Procedure sửa thông tin học sinh
+        /// </summary>
+        /// <param name="hocsinh"></param>
+        /// <returns></returns>
         public bool suaHocSinh_DAO(HocSinh hocsinh)
         {
             string nameProc_TNHocSinh = "sp_suaHocSinh";
@@ -253,6 +351,12 @@ namespace QLHSC3.DAO
             return false;
         }
 
+        /// <summary>
+        /// Procedure thêm học sinh vào lớp
+        /// </summary>
+        /// <param name="hocsinh"></param>
+        /// <param name="lop"></param>
+        /// <returns></returns>
         public bool themHocSinh_VaoLop_DAO(HocSinh hocsinh, Lop lop)
         {
             string nameProc_ThemHocSinh_VaoLop = "sp_themHocSinh_VaoLop";
@@ -265,6 +369,13 @@ namespace QLHSC3.DAO
             }
             return false;
         }
+
+
+        /// <summary>
+        /// Procesure xóa học sinh ra khỏi lớp
+        /// </summary>
+        /// <param name="hocsinh"></param>
+        /// <returns></returns>
         public bool xoaHocSinh_RaKhoiLop_DAO(HocSinh hocsinh)
         {
             string nameProc_ThemHocSinh_VaoLop = "sp_xoaHocSinh_RaKhoiLop";
@@ -276,6 +387,13 @@ namespace QLHSC3.DAO
             }
             return false;
         }
+
+        /// <summary>
+        /// Procedure sửa học sinh từ mã học sinh và mã lớp
+        /// </summary>
+        /// <param name="hocsinh"></param>
+        /// <param name="lop"></param>
+        /// <returns></returns>
         public bool suaHocSinh_SuaLop_DAO(HocSinh hocsinh, Lop lop)
         {
             string nameProc_SuaHocSinh_SuaLop = "sp_suaHocSinh_SuaLop";

@@ -226,8 +226,14 @@
     <EmbeddedResource Include="GUI\frmBaoCaoTongKetHocKi.resx">
       <DependentUpon>frmBaoCaoTongKetHocKi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLapThongBao.resx">
       <DependentUpon>frmLapThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmXemThongTinCaNhan.resx">
       <DependentUpon>frmXemThongTinCaNhan.cs</DependentUpon>
@@ -240,6 +246,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
@@ -254,12 +261,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <None Include="Resources\13753.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\6.jpg" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ab.jpg" />
   </ItemGroup>
@@ -276,7 +277,6 @@
     <None Include="Resources\thay doi ho so hs.png" />
     <None Include="Resources\thay doi danh sach lop.png" />
     <None Include="Resources\thay doi bang diem.png" />
-    <None Include="Resources\logo.png" />
     <None Include="Resources\logo-png %281%29.png" />
     <None Include="Resources\login.png" />
     <None Include="Resources\lap thong bao.png" />

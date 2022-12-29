@@ -17,6 +17,12 @@ namespace QLHSC3.DAO
         //    HK.TenMonHoc = dt.Rows[i]["tenMonHoc"].ToString();
         //    return HK;
         //}
+
+        /// <summary>
+        /// Tạo đối tượng từ dòng dữ liệu
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
         protected override object createObjectFromDatarow(DataRow row)
         {
             //throw new NotImplementedException();
@@ -25,6 +31,11 @@ namespace QLHSC3.DAO
             HK.TenMonHoc = row["tenMonHoc"].ToString();
             return HK;
         }
+
+        /// <summary>
+        /// Xuất danh sách môn học
+        /// </summary>
+        /// <returns></returns>
         public MonHoc[] getAllMH()
         {
             string strSql = "SELECT * FROM MonHoc";

@@ -12,6 +12,12 @@ namespace QLHSC3.DAO
     class DiemDAO
     {
         private int maDiem = -1;
+        /// <summary>
+        /// Xuất dữ liệu từ dòng trong bảng
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <param name="i"></param>
+        /// <returns></returns>
         private Diem GetDataFromDataRow(DataTable dt, int i)
         {
             maDiem = -1;
@@ -39,6 +45,12 @@ namespace QLHSC3.DAO
             return diem;
         }
 
+        /// <summary>
+        /// Xuất dữ liệu từ dòng trong bảng
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <param name="i"></param>
+        /// <returns></returns>
         private Diem GetDataFromDataRow2(DataTable dt, int i)
         {
             maDiem = -1;
@@ -60,6 +72,13 @@ namespace QLHSC3.DAO
             return diem;
         }
 
+        /// <summary>
+        /// Procedure xuất bảng điểm môn học của lớp
+        /// </summary>
+        /// <param name="maLop"></param>
+        /// <param name="maMonHoc"></param>
+        /// <param name="maHocKi"></param>
+        /// <returns></returns>
         public Diem[] getMarkIf(int maLop, int maMonHoc, int maHocKi)
         {
             string nameProc = "sp_LayBangDiem1MonCuaLop";
@@ -88,6 +107,13 @@ namespace QLHSC3.DAO
             return allMark;
         }
 
+
+        /// <summary>
+        /// Procedure lấy điểm học sinh
+        /// </summary>
+        /// <param name="maHocSinh"></param>
+        /// <param name="maHocKi"></param>
+        /// <returns></returns>
         public Diem[] getMarkIf(int maHocSinh, int maHocKi)
         {
             string nameProc = "sp_LayDiemHocSinh";
@@ -106,6 +132,12 @@ namespace QLHSC3.DAO
             return allMark;
         }
 
+
+        /// <summary>
+        /// Chỉnh sửa điểm
+        /// </summary>
+        /// <param name="diem"></param>
+        /// <returns></returns>
         public bool UpdateMark(Diem[] diem)
         {
             string strSql = "sp_UpdateMark";
@@ -126,6 +158,13 @@ namespace QLHSC3.DAO
             return true;
         }
 
+        /// <summary>
+        /// Thêm điểm số
+        /// </summary>
+        /// <param name="diem15P"></param>
+        /// <param name="diem1T"></param>
+        /// <param name="diemHK"></param>
+        /// <returns></returns>
         public bool InsertMark(float diem15P, float diem1T, float diemHK)
         {
 
@@ -145,6 +184,11 @@ namespace QLHSC3.DAO
             }
         }
 
+
+        /// <summary>
+        /// Xuất dữ liệu vừa thêm vào mới nhất
+        /// </summary>
+        /// <returns></returns>
         private Diem layDongDuLieuVuaThemVao()
         {
             Diem diem = new Diem();

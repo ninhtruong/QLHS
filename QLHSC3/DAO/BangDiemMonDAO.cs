@@ -9,6 +9,14 @@ namespace QLHSC3.DAO
 {
     class BangDiemMonDAO
     {
+        /// <summary>
+        /// Procedure Thêm bảng điểm môn học
+        /// </summary>
+        /// <param name="maHS"></param>
+        /// <param name="maDiem"></param>
+        /// <param name="maMH"></param>
+        /// <param name="maHK"></param>
+        /// <returns></returns>
         public bool InsertMarkTable(int maHS, int maDiem, int maMH, int maHK)
         {
             string nameProc = "sp_ThemBangDiemMon";

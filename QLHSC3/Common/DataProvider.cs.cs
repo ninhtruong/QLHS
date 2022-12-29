@@ -11,28 +11,10 @@ namespace QLHSC3.Common
     class DataProvider
     {
         #region ConnectionString
-        public static String ConnectionString
-        {
-            get
-            {
-                return ReadConnectionString("ConnectionString.xml");
-            }
-        }
-        public static String ReadConnectionString(String file)
-        {
-            try
-            {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(file);
-                XmlElement root = doc.DocumentElement;
-                String connectionString = root.InnerText;
-                return connectionString;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        /// <summary>
+        /// Chuỗi kết nối với Database
+        /// </summary>
+        public static String ConnectionString= $"Server=DESKTOP-JSBFTOH\\DSG;Database=QLHSC3;Trusted_Connection=True;MultipleActiveResultSets=true";
         #endregion
         #region ExcuteQuery : Get
         public static DataTable executeQuery(string sql)
@@ -64,6 +46,11 @@ namespace QLHSC3.Common
         }
         #endregion 
         #region EcuteNonquery : Insert, Delete, Update 
+        /// <summary>
+        /// Method Post thao tác trực tiếp với dữ liệu
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
         public static int executeNonQuery(string sql)
         {
             int n = 0;
@@ -94,6 +81,12 @@ namespace QLHSC3.Common
         }
         #endregion
         #region ExcuteQuery: Store Procedure
+        /// <summary>
+        /// Thao tác trực tiếp với Procedure trên Database
+        /// </summary>
+        /// <param name="nameProc"></param>
+        /// <param name="para"></param>
+        /// <returns></returns>
         public static DataTable executeStoreProcedureQuery(string nameProc, params SqlParameter[] para)
         {
             DataTable dt = new DataTable();
@@ -131,6 +124,12 @@ namespace QLHSC3.Common
         }
         #endregion 
         #region ExcuteNonQuery : Store Procedure
+        /// <summary>
+        /// Thao tác trực tiếp với Procedure trên Database
+        /// </summary>
+        /// <param name="nameProc"></param>
+        /// <param name="para"></param>
+        /// <returns></returns>
         public static int executeStoreProcedureNonQuery(string nameProc, params SqlParameter[] para)
         {
             int n = 0;

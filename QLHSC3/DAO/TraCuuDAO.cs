@@ -18,6 +18,12 @@ namespace QLHSC3.DAO
         }
         class TraCuuHocSinh_LOP_MAHOCSINH : TraCuuHocSinh
         {
+
+            /// <summary>
+            /// Tìm kiếm thoe mã lớp và mã học sinh
+            /// </summary>
+            /// <param name="search"></param>
+            /// <returns></returns>
             public override DataTable Search(string search)
             {
                 //search: maLop,maHocSinh
@@ -32,6 +38,13 @@ namespace QLHSC3.DAO
                 return bangDSHocSinh;
             }
         }
+
+        /// <summary>
+        /// Tra cứ học sinh
+        /// </summary>
+        /// <param name="search"></param>
+        /// <param name="loaiTraCuu"></param>
+        /// <returns></returns>
         public HocSinh[] traCuuHocSinh_DAO(string search, int loaiTraCuu)
         {
             HocSinh[] dsHocSinh;
@@ -40,6 +53,12 @@ namespace QLHSC3.DAO
             dsHocSinh = layDanhSachHocSinh_Tu_Bang(bangHocSinh);
             return dsHocSinh;
         }
+
+        /// <summary>
+        /// Lấy danh sách học sinh từ bảng
+        /// </summary>
+        /// <param name="bangDSHocSinh"></param>
+        /// <returns></returns>
         public HocSinh[] layDanhSachHocSinh_Tu_Bang(DataTable bangDSHocSinh)
         {
             HocSinh[] dsHocSinh = new HocSinh[bangDSHocSinh.Rows.Count];

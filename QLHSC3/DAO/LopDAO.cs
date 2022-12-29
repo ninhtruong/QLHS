@@ -11,16 +11,12 @@ namespace QLHSC3.DAO
 {
     class LopDAO : DaoSupport
     {
-        private Lop GetDataFromDataRow(DataTable dt, int i)
-        {
-            Lop lop = new Lop();
-            lop.MaGV_ChuNhiem = Convert.ToInt32(dt.Rows[i]["maGV_ChuNhiem"].ToString());
-            lop.MaLop = Convert.ToInt32(dt.Rows[i]["maLop"].ToString());
-            lop.MaKHoi = Convert.ToInt32(dt.Rows[i]["maKhoi"].ToString());
-            lop.TenLop = dt.Rows[i]["tenLop"].ToString();
-            lop.SiSo = Convert.ToInt32(dt.Rows[i]["siSo"].ToString());
-            return lop;
-        }
+
+        /// <summary>
+        /// Tạo đối tượng từ dòng dữ liệu
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
         protected override object createObjectFromDatarow(DataRow row)
         {
             //throw new NotImplementedException();
@@ -32,6 +28,11 @@ namespace QLHSC3.DAO
             lop.SiSo = Convert.ToInt32(row["siSo"].ToString());
             return lop;
         }
+
+        /// <summary>
+        /// Xuất danh sách lớp
+        /// </summary>
+        /// <returns></returns>
         public Lop[] getAllClass()
         {
             string strSql = "SELECT * FROM Lop";
@@ -47,6 +48,14 @@ namespace QLHSC3.DAO
             //return allClass;
         }
 
+
+        /// <summary>
+        /// Procedure số lượng học sinh đạt
+        /// </summary>
+        /// <param name="maMonHoc"></param>
+        /// <param name="maHocKi"></param>
+        /// <param name="maLop"></param>
+        /// <returns></returns>
         public int soLuongDat(int maMonHoc, int maHocKi, int maLop)
         {
             string nameProc = "sp_SoLuongHocSinhDat";
@@ -57,6 +66,13 @@ namespace QLHSC3.DAO
             int n = DataProvider.ExecuteScalarProcedureNonQuery(nameProc, para);
             return n;
         }
+
+        /// <summary>
+        /// Số lượng học sinh đạt học kỳ
+        /// </summary>
+        /// <param name="maHocKi"></param>
+        /// <param name="maLop"></param>
+        /// <returns></returns>
         public int soLuongDatHocKi(int maHocKi, int maLop)
         {
             string nameProc = "sp_SoLuongHocSinhDatHocKi";
@@ -67,6 +83,11 @@ namespace QLHSC3.DAO
             return n;
         }
 
+
+        /// <summary>
+        /// Procesure lấy danh sách lớp
+        /// </summary>
+        /// <returns></returns>
         public Lop[] layDanhSachLop_DAO()
         {
             Lop[] dsLop;
@@ -75,6 +96,13 @@ namespace QLHSC3.DAO
             dsLop = layDanhSachLop_Tu_Bang(bangDSLop);
             return dsLop;
         }
+
+
+        /// <summary>
+        /// Lấy danh sách từ bảng
+        /// </summary>
+        /// <param name="bangDSLop"></param>
+        /// <returns></returns>
         public Lop[] layDanhSachLop_Tu_Bang(DataTable bangDSLop)
         {
             Lop[] dsLop = new Lop[bangDSLop.Rows.Count];
@@ -90,6 +118,13 @@ namespace QLHSC3.DAO
             }
             return dsLop;
         }
+
+
+        /// <summary>
+        /// Lấy thông tin giáo viên từ mã lớp
+        /// </summary>
+        /// <param name="maLop"></param>
+        /// <returns></returns>
         public string layTenGiaoVien_Tu_MaLop_DAO(int maLop)
         {
             string name_Proc_LayTenGiaoVien_MaLop = "sp_layTenGiaoVien_Tu_MaLop";
@@ -101,6 +136,13 @@ namespace QLHSC3.DAO
             }
             return null;
         }
+
+
+        /// <summary>
+        /// Lấy tên lớp từ mã lớp
+        /// </summary>
+        /// <param name="maLop"></param>
+        /// <returns></returns>
         public string layTenLop_Tu_MaLop_DAO(int maLop)
         {
             string name_Proc_LayTenGiaoVien_MaLop = "sp_layTenLop_Tu_MaLop";
@@ -112,6 +154,12 @@ namespace QLHSC3.DAO
             }
             return null;
         }
+
+        /// <summary>
+        /// Lấy thời khóa biểu từ mã lớp
+        /// </summary>
+        /// <param name="maLop"></param>
+        /// <returns></returns>
         public string layThoiKhoaBieu_Tu_MaLop(int maLop)
         {
             string name_Proc_LayTenGiaoVien_MaLop = "sp_layTenLop_Tu_MaLop";

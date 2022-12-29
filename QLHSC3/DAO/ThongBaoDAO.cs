@@ -11,6 +11,11 @@ namespace QLHSC3.DAO
 {
     public class ThongBaoDAO
     {
+
+        /// <summary>
+        /// Tạo thông báo
+        /// </summary>
+        /// <param name="thongbao"></param>
         public void taoThongBao_DAO(ThongBao thongbao)
         {
             string name_Proc_TaoThongBao = "sp_taoThongBao";
@@ -19,6 +24,12 @@ namespace QLHSC3.DAO
             SqlParameter para3 = new SqlParameter("@ngayThongBao", thongbao.NgayThongBao);
             DataProvider.executeStoreProcedureQuery(name_Proc_TaoThongBao, para1, para2, para3);
         }
+
+        /// <summary>
+        /// Lấy danh sách thông báo từ bảng
+        /// </summary>
+        /// <param name="bangThongBao"></param>
+        /// <returns></returns>
         public ThongBao[] layDanhSachThongBao_Tu_bang(DataTable bangThongBao)
         {
             ThongBao[] dsThongBao = new ThongBao[bangThongBao.Rows.Count];
@@ -33,6 +44,11 @@ namespace QLHSC3.DAO
             }
             return dsThongBao;
         }
+
+        /// <summary>
+        /// Lấy tất cả thông báo từ bảng
+        /// </summary>
+        /// <returns></returns>
         public ThongBao[] layTatCaThongBao_DAO()
         {
             ThongBao[] dsThongBao;
@@ -41,6 +57,11 @@ namespace QLHSC3.DAO
             dsThongBao = layDanhSachThongBao_Tu_bang(table);
             return dsThongBao;
         }
+
+        /// <summary>
+        /// Xóa thông báo
+        /// </summary>
+        /// <param name="maThongBao"></param>
         public void xoaThongBao_MaThongBao_DAO(int maThongBao)
         {
             string name_Proc_XoaThongBao_MaThongBao = "sp_xoaThongBao_MaThongBao";
