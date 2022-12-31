@@ -66,7 +66,7 @@
             this.groupPanel1.Controls.Add(this.labelX7);
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Location = new System.Drawing.Point(236, 20);
-            this.groupPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.Size = new System.Drawing.Size(660, 201);
             // 
@@ -111,7 +111,7 @@
             this.lbMaHS.BackgroundStyle.Class = "";
             this.lbMaHS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbMaHS.Location = new System.Drawing.Point(132, 43);
-            this.lbMaHS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbMaHS.Margin = new System.Windows.Forms.Padding(4);
             this.lbMaHS.Name = "lbMaHS";
             this.lbMaHS.Size = new System.Drawing.Size(100, 28);
             this.lbMaHS.TabIndex = 31;
@@ -126,7 +126,7 @@
             this.labelX14.BackgroundStyle.Class = "";
             this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX14.Location = new System.Drawing.Point(31, 42);
-            this.labelX14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX14.Margin = new System.Windows.Forms.Padding(4);
             this.labelX14.Name = "labelX14";
             this.labelX14.Size = new System.Drawing.Size(100, 28);
             this.labelX14.TabIndex = 30;
@@ -141,11 +141,11 @@
             this.lbGioiTinh.BackgroundStyle.Class = "";
             this.lbGioiTinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbGioiTinh.Location = new System.Drawing.Point(132, 113);
-            this.lbGioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.lbGioiTinh.Name = "lbGioiTinh";
             this.lbGioiTinh.Size = new System.Drawing.Size(100, 28);
             this.lbGioiTinh.TabIndex = 29;
-            this.lbGioiTinh.Text = "10CTT1";
+            this.lbGioiTinh.Text = "Nam";
             // 
             // labelX6
             // 
@@ -156,7 +156,7 @@
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Location = new System.Drawing.Point(31, 112);
-            this.labelX6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX6.Margin = new System.Windows.Forms.Padding(4);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(100, 28);
             this.labelX6.TabIndex = 28;
@@ -171,7 +171,7 @@
             this.lbEmail.BackgroundStyle.Class = "";
             this.lbEmail.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbEmail.Location = new System.Drawing.Point(297, 112);
-            this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(183, 28);
             this.lbEmail.TabIndex = 27;
@@ -186,7 +186,7 @@
             this.lbDiaChi.BackgroundStyle.Class = "";
             this.lbDiaChi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbDiaChi.Location = new System.Drawing.Point(297, 78);
-            this.lbDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.lbDiaChi.Name = "lbDiaChi";
             this.lbDiaChi.Size = new System.Drawing.Size(303, 28);
             this.lbDiaChi.TabIndex = 26;
@@ -201,7 +201,7 @@
             this.lbNgaySinh.BackgroundStyle.Class = "";
             this.lbNgaySinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbNgaySinh.Location = new System.Drawing.Point(132, 78);
-            this.lbNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.lbNgaySinh.Name = "lbNgaySinh";
             this.lbNgaySinh.Size = new System.Drawing.Size(100, 28);
             this.lbNgaySinh.TabIndex = 24;
@@ -217,7 +217,7 @@
             this.lbHoTen.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHoTen.Location = new System.Drawing.Point(177, 4);
-            this.lbHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.lbHoTen.Name = "lbHoTen";
             this.lbHoTen.Size = new System.Drawing.Size(128, 28);
             this.lbHoTen.TabIndex = 23;
@@ -232,7 +232,7 @@
             this.labelX10.BackgroundStyle.Class = "";
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX10.Location = new System.Drawing.Point(31, 78);
-            this.labelX10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX10.Margin = new System.Windows.Forms.Padding(4);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(100, 28);
             this.labelX10.TabIndex = 22;
@@ -247,7 +247,7 @@
             this.labelX8.BackgroundStyle.Class = "";
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Location = new System.Drawing.Point(232, 113);
-            this.labelX8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX8.Margin = new System.Windows.Forms.Padding(4);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(100, 28);
             this.labelX8.TabIndex = 21;
@@ -262,7 +262,7 @@
             this.labelX7.BackgroundStyle.Class = "";
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.Location = new System.Drawing.Point(232, 78);
-            this.labelX7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX7.Margin = new System.Windows.Forms.Padding(4);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(100, 28);
             this.labelX7.TabIndex = 20;
@@ -278,7 +278,7 @@
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.Location = new System.Drawing.Point(96, 4);
-            this.labelX3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX3.Margin = new System.Windows.Forms.Padding(4);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(100, 28);
             this.labelX3.TabIndex = 18;
@@ -303,7 +303,7 @@
             this.groupPanel2.Controls.Add(this.pictureBox1);
             this.groupPanel2.Controls.Add(this.groupPanel1);
             this.groupPanel2.Location = new System.Drawing.Point(21, 46);
-            this.groupPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Size = new System.Drawing.Size(919, 247);
             // 
@@ -358,7 +358,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupPanel2);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmXemThongTinCaNhan";
             this.Text = "Xem thông tin cá nhân";
             this.Load += new System.EventHandler(this.frmXemThongTinCaNhan_Load);
