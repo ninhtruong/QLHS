@@ -221,7 +221,7 @@
             this.lbHoTen.Name = "lbHoTen";
             this.lbHoTen.Size = new System.Drawing.Size(128, 28);
             this.lbHoTen.TabIndex = 23;
-            this.lbHoTen.Text = "Hồ Xuân Cường";
+            this.lbHoTen.Text = "Trương Nhật Ninh";
             // 
             // labelX10
             // 

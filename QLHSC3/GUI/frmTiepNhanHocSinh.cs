@@ -110,27 +110,35 @@ namespace QLHSC3
             if (hocsinh.HoTen != null)
             {
                 bool check;
-                if (static_sua == true)
+                var Tuoi = DateTime.Now.Year - hocsinh.NgaySinh.Year;
+                if(Tuoi>15 && Tuoi < 20)
                 {
-                    hocsinh.MaHocSinh = Convert.ToInt32(dtgvHocSinh.CurrentRow.Cells["maHocSinh"].Value);
-                    check = hocsinhBUS.suaHocSinh_BUS(hocsinh);
+                    if (static_sua == true)
+                    {
+                        hocsinh.MaHocSinh = Convert.ToInt32(dtgvHocSinh.CurrentRow.Cells["maHocSinh"].Value);
+                        check = hocsinhBUS.suaHocSinh_BUS(hocsinh);
+                    }
+                    else
+                    {
+                        check = hocsinhBUS.themHocSinh_BUS(hocsinh);
+                    }
+                    if (check == true)
+                    {
+                        MessageBox.Show("Thực hiện thành công");
+                        HocSinh[] dsHocSinh = hocsinhBUS.layDanhSachHocSinh_BUS();
+                        DataTable bangHocSinh = chuyenQuaBang_HocSinh(dsHocSinh);
+                        duaDSHocSinh_GridView(bangHocSinh, dtgvHocSinh);
+                        reset_GUI();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thực hiện thất bại");
+                    }
                 }
                 else
                 {
-                    check = hocsinhBUS.themHocSinh_BUS(hocsinh);
-                }
-                if (check == true)
-                {
-                    MessageBox.Show("Thực hiện thành công");
-                    HocSinh[] dsHocSinh = hocsinhBUS.layDanhSachHocSinh_BUS();
-                    DataTable bangHocSinh = chuyenQuaBang_HocSinh(dsHocSinh);
-                    duaDSHocSinh_GridView(bangHocSinh, dtgvHocSinh);
-                    reset_GUI();
-                }
-                else
-                {
-                    MessageBox.Show("Thực hiện thất bại");
-                }
+                    MessageBox.Show("Tuổi học sinh phải lớn hơn 15 và bé hơn 20");
+                }    
             }
             else
             {

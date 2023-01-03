@@ -1,4 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LICH_SU_DANG_NHAP>
-	<TAI_KHOAN Ten_Dang_Nhap="caothuvolam" Mat_Khau="caothuvolam" />
+  <TAI_KHOAN Ten_Dang_Nhap="ninhdeptrai" Mat_Khau="ninhdeptrai" />
+  <TAI_KHOAN Ten_Dang_Nhap="thino" Mat_Khau="thino" />
+  <TAI_KHOAN Ten_Dang_Nhap="nhatninh" Mat_Khau="nhatninh" />
+  <TAI_KHOAN Ten_Dang_Nhap="thanhloc" Mat_Khau="thanhloc" />
+  <TAI_KHOAN Ten_Dang_Nhap="ninh2022" Mat_Khau="ninh2022" />
 </LICH_SU_DANG_NHAP>

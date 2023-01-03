@@ -65,7 +65,7 @@ namespace QLHSC3.GUI
             bool flag = false;
             flag = Convert.ToBoolean(cbGhiNho.CheckState);
             TaiKhoanDangNhap taiKhoanHienTai = new TaiKhoanDangNhap(txtTenDN.Text, txtMatKhau.Text);
-            //Load tai khoan dang nhap len
+            //Load tài khoản đăng nhập lên
             TaiKhoanBUS Adapter = new TaiKhoanBUS();
             TaiKhoanDangNhap[] listTaiKhoan = Adapter.getAllUser_BUS();
             int KQ=0;
